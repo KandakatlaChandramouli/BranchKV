@@ -22,6 +22,13 @@ func BenchmarkWALAppend(
 	b.ResetTimer()
 
 	for i := 0; i < b.N; i++ {
-		_ = w.Append(uint64(i))
+
+		err = w.Append(
+			[]byte("branchkv"),
+		)
+
+		if err != nil {
+			b.Fatal(err)
+		}
 	}
 }

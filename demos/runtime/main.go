@@ -1,42 +1,31 @@
 package main
 
 import (
-	"branchkv-core/internal/mmap"
-	"branchkv-core/internal/snapshot"
 	"branchkv-core/internal/wal"
 	"fmt"
 )
 
-type RuntimeState struct {
-	Value int
-}
-
 func main() {
 
-	w, _ := wal.NewWAL("runtime.wal")
+	w, err := wal.NewWAL(
+		"runtime.wal",
+	)
+
+	if err != nil {
+		panic(err)
+	}
 
 	defer w.Close()
 
-	_ = w.Append(999)
-
-	region, _ := mmap.NewMMapRegion(
-		"runtime.mmap",
-		4096,
+	err = w.Append(
+		[]byte("runtime"),
 	)
 
-	defer region.Close()
-
-	region.Data[0] = 77
-
-	engine := snapshot.NewSnapshotEngine(
-		"runtime_snapshot.gob",
-	)
-
-	state := RuntimeState{
-		Value: 123,
+	if err != nil {
+		panic(err)
 	}
 
-	_ = engine.Save(state)
-
-	fmt.Println("runtime initialized")
+	fmt.Println(
+		"runtime wal healthy",
+	)
 }
