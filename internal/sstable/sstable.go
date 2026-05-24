@@ -6,23 +6,31 @@ type Entry struct {
 }
 
 type SSTable struct {
-	entries []Entry
+	Entries []Entry
 }
 
 func NewSSTable() *SSTable {
 
 	return &SSTable{
-		entries: make([]Entry, 0),
+		Entries: make(
+			[]Entry,
+			0,
+		),
 	}
 }
 
-func (s *SSTable) Append(
+func NewTable() *SSTable {
+
+	return NewSSTable()
+}
+
+func (t *SSTable) Add(
 	key string,
 	value []byte,
 ) {
 
-	s.entries = append(
-		s.entries,
+	t.Entries = append(
+		t.Entries,
 		Entry{
 			Key:   key,
 			Value: value,
@@ -30,6 +38,6 @@ func (s *SSTable) Append(
 	)
 }
 
-func (s *SSTable) Size() int {
-	return len(s.entries)
+func (t *SSTable) Size() int {
+	return len(t.Entries)
 }

@@ -1,33 +1,55 @@
 package checkpoint
 
 import (
-	"encoding/gob"
+	"encoding/json"
 	"os"
 )
 
-type Checkpoint struct {
-	Path string
+type Snapshot struct {
+	State map[string]string
 }
 
-func NewCheckpoint(
+func Save(
 	path string,
-) *Checkpoint {
-
-	return &Checkpoint{
-		Path: path,
-	}
-}
-
-func (c *Checkpoint) Save(
-	v any,
+	s Snapshot,
 ) error {
 
-	f, err := os.Create(c.Path)
+	data, err := json.Marshal(
+		s,
+	)
+
 	if err != nil {
 		return err
 	}
 
-	defer f.Close()
+	return os.WriteFile(
+		path,
+		data,
+		0644,
+	)
+}
 
-	return gob.NewEncoder(f).Encode(v)
+func Load(
+	path string,
+) (
+	Snapshot,
+	error,
+) {
+
+	data, err := os.ReadFile(
+		path,
+	)
+
+	if err != nil {
+		return Snapshot{}, err
+	}
+
+	var s Snapshot
+
+	err = json.Unmarshal(
+		data,
+		&s,
+	)
+
+	return s, err
 }

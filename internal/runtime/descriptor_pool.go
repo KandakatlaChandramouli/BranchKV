@@ -5,23 +5,40 @@ import (
 	"sync"
 )
 
-var DescriptorPool = sync.Pool{
-	New: func() any {
-		return &virtual_mem.VirtualDescriptor{}
-	},
+type DescriptorPool struct {
+	descriptors []virtual_mem.VirtualDescriptor
+	mu          sync.Mutex
 }
 
-func AcquireDescriptor() *virtual_mem.VirtualDescriptor {
+func NewDescriptorPool() *DescriptorPool {
 
-	d := DescriptorPool.Get().(*virtual_mem.VirtualDescriptor)
-
-	*d = virtual_mem.VirtualDescriptor{}
-
-	return d
+	return &DescriptorPool{
+		descriptors: make(
+			[]virtual_mem.VirtualDescriptor,
+			0,
+		),
+	}
 }
 
-func ReleaseDescriptor(
-	d *virtual_mem.VirtualDescriptor,
+func (p *DescriptorPool) Add(
+	desc virtual_mem.VirtualDescriptor,
 ) {
-	DescriptorPool.Put(d)
+
+	p.mu.Lock()
+	defer p.mu.Unlock()
+
+	p.descriptors = append(
+		p.descriptors,
+		desc,
+	)
+}
+
+func (p *DescriptorPool) Size() int {
+
+	p.mu.Lock()
+	defer p.mu.Unlock()
+
+	return len(
+		p.descriptors,
+	)
 }

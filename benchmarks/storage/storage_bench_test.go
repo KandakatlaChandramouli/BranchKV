@@ -1,31 +1,28 @@
 package storage
 
 import (
-	"branchkv-core/internal/objectstore"
-	"branchkv-core/internal/sstable"
+	"branchkv-core/internal/wal"
 	"testing"
 )
 
-func BenchmarkStorageRuntime(
+func BenchmarkWALAppend(
 	b *testing.B,
 ) {
 
-	store := objectstore.NewObjectStore()
+	w, _ := wal.Open(
+		"bench.wal",
+	)
 
-	table := sstable.NewSSTable()
+	defer w.Close()
+
+	payload := []byte("branchkv")
 
 	b.ResetTimer()
 
 	for i := 0; i < b.N; i++ {
 
-		store.Put(
-			"key",
-			[]byte("value"),
-		)
-
-		table.Append(
-			"key",
-			[]byte("value"),
+		_ = w.Append(
+			payload,
 		)
 	}
 }

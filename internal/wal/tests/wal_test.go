@@ -9,7 +9,7 @@ func TestWALAppend(
 	t *testing.T,
 ) {
 
-	w, err := wal.NewWAL(
+	w, err := wal.Open(
 		"test.wal",
 	)
 
@@ -19,7 +19,9 @@ func TestWALAppend(
 
 	defer w.Close()
 
-	err = w.Append(42)
+	err = w.Append(
+		[]byte("branchkv"),
+	)
 
 	if err != nil {
 		t.Fatal(err)

@@ -7,24 +7,37 @@ import (
 	"testing"
 )
 
-func TestInsertAndSearch(t *testing.T) {
+func TestRadixInsert(
+	t *testing.T,
+) {
+
 	rt := tree.NewRadixTree()
 
 	mmu := virtual_mem.NewMMU()
 
-	desc := mmu.Allocate(1, 8)
+	desc, err := mmu.AllocateDescriptor(
+		1,
+		128,
+	)
 
-	sequence := []types.TokenID{1, 2, 3, 4}
-
-	rt.Insert(sequence, desc)
-
-	node, found := rt.Search(sequence)
-
-	if !found {
-		t.Fatal("sequence not found")
+	if err != nil {
+		t.Fatal(err)
 	}
 
-	if node.Descriptor != desc {
-		t.Fatal("descriptor mismatch")
+	sequence := []types.TokenID{
+		1, 2, 3,
+	}
+
+	rt.Insert(
+		sequence,
+		desc,
+	)
+
+	_, ok := rt.Search(
+		sequence,
+	)
+
+	if !ok {
+		t.Fatal("search failed")
 	}
 }

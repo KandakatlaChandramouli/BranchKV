@@ -1,76 +1,69 @@
 package main
 
 import (
-	"branchkv-core/internal/compaction"
-	"branchkv-core/internal/filesystem"
-	"branchkv-core/internal/io_uring"
-	"branchkv-core/internal/objectstore"
-	"branchkv-core/internal/raft"
-	"branchkv-core/internal/sharding"
+	"branchkv-core/internal/checkpoint"
+	"branchkv-core/internal/pagecache"
+	"branchkv-core/internal/recoverylog"
 	"branchkv-core/internal/sstable"
+	"branchkv-core/internal/wal"
 	"fmt"
 )
 
 func main() {
 
-	io := io_uring.NewSubmissionQueue()
+	w, err := wal.Open(
+		"runtime.wal",
+	)
 
-	io.Submit()
+	if err != nil {
+		panic(err)
+	}
 
-	fs := filesystem.NewFileSystem()
+	defer w.Close()
 
-	fs.Create(
-		"runtime",
+	err = w.Append(
 		[]byte("branchkv"),
 	)
 
-	store := objectstore.NewObjectStore()
+	if err != nil {
+		panic(err)
+	}
 
-	store.Put(
-		"branch",
-		[]byte("state"),
-	)
+	table := sstable.NewTable()
 
-	shard := sharding.NewSharder()
-
-	node := shard.Shard(
-		"branch",
-		4,
-	)
-
-	raftNode := raft.NewRaftNode()
-
-	term := raftNode.NextTerm()
-
-	table := sstable.NewSSTable()
-
-	table.Append(
+	table.Add(
 		"runtime",
-		[]byte("kv"),
+		[]byte("active"),
 	)
 
-	compactor := compaction.NewCompactor()
+	cache := pagecache.NewCache()
 
-	segment := compactor.Compact(
-		[]compaction.Segment{
-			{ID: 1},
+	cache.Put(
+		1,
+		[]byte("cached"),
+	)
+
+	log := recoverylog.NewLog()
+
+	log.Append(
+		1,
+		[]byte("recover"),
+	)
+
+	snapshot := checkpoint.Snapshot{
+		State: map[string]string{
+			"runtime": "healthy",
 		},
+	}
+
+	err = checkpoint.Save(
+		"checkpoint.json",
+		snapshot,
 	)
 
-	fmt.Println(
-		"io:",
-		io.Count(),
-	)
-
-	fmt.Println(
-		"shard:",
-		node,
-	)
-
-	fmt.Println(
-		"raft:",
-		term,
-	)
+	if err != nil {
+		panic(err)
+	}
 
 	fmt.Println(
 		"sstable:",
@@ -78,7 +71,7 @@ func main() {
 	)
 
 	fmt.Println(
-		"segment:",
-		segment.ID,
+		"recovery:",
+		log.Size(),
 	)
 }

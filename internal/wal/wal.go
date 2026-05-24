@@ -11,11 +11,14 @@ type WAL struct {
 	mu   sync.Mutex
 }
 
-func NewWAL(
+func Open(
 	path string,
-) (*WAL, error) {
+) (
+	*WAL,
+	error,
+) {
 
-	f, err := os.OpenFile(
+	file, err := os.OpenFile(
 		path,
 		os.O_CREATE|
 			os.O_RDWR|
@@ -28,27 +31,53 @@ func NewWAL(
 	}
 
 	return &WAL{
-		file: f,
+		file: file,
 	}, nil
 }
 
+func NewWAL(
+	path string,
+) (
+	*WAL,
+	error,
+) {
+
+	return Open(path)
+}
+
 func (w *WAL) Append(
-	value uint64,
+	data []byte,
 ) error {
 
 	w.mu.Lock()
 	defer w.mu.Unlock()
 
-	buf := make([]byte, 8)
+	size := uint64(len(data))
+
+	header := make([]byte, 8)
 
 	binary.LittleEndian.PutUint64(
-		buf,
-		value,
+		header,
+		size,
 	)
 
-	_, err := w.file.Write(buf)
+	_, err := w.file.Write(
+		header,
+	)
 
-	return err
+	if err != nil {
+		return err
+	}
+
+	_, err = w.file.Write(
+		data,
+	)
+
+	if err != nil {
+		return err
+	}
+
+	return w.file.Sync()
 }
 
 func (w *WAL) Close() error {

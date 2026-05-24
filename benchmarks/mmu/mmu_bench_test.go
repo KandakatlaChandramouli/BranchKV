@@ -1,18 +1,28 @@
-package benchmarks
+package mmu
 
 import (
 	"branchkv-core/internal/virtual_mem"
 	"testing"
 )
 
-func BenchmarkFork(b *testing.B) {
+func BenchmarkMMUWrite(
+	b *testing.B,
+) {
+
 	mmu := virtual_mem.NewMMU()
 
-	mmu.AllocatePage(1)
+	_ = mmu.AllocatePage(
+		1,
+	)
 
 	b.ResetTimer()
 
 	for i := 0; i < b.N; i++ {
-		_ = mmu.Fork(1, uint64(i+2))
+
+		_ = mmu.Write(
+			1,
+			0,
+			float32(i),
+		)
 	}
 }

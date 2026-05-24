@@ -5,40 +5,101 @@ import (
 	"testing"
 )
 
-func TestForkSharesMemory(t *testing.T) {
+func TestMMUAllocate(
+	t *testing.T,
+) {
+
 	mmu := virtual_mem.NewMMU()
 
-	original := mmu.Allocate(1, 8)
+	err := mmu.AllocatePage(1)
 
-	err := mmu.Fork(1, 2)
+	if err != nil {
+		t.Fatal(err)
+	}
+}
+
+func TestMMUFork(
+	t *testing.T,
+) {
+
+	mmu := virtual_mem.NewMMU()
+
+	err := mmu.AllocatePage(1)
+
 	if err != nil {
 		t.Fatal(err)
 	}
 
-	forked, _ := mmu.Resolve(2)
+	err = mmu.Fork(
+		1,
+		2,
+	)
 
-	if original.Page != forked.Page {
-		t.Fatal("pages not shared")
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	if mmu.RefCount(1) != 2 {
+		t.Fatal("bad refcount")
 	}
 }
 
-func TestCopyOnWrite(t *testing.T) {
+func TestMMUCopyOnWrite(
+	t *testing.T,
+) {
+
 	mmu := virtual_mem.NewMMU()
 
-	mmu.Allocate(1, 8)
+	err := mmu.AllocatePage(1)
 
-	mmu.Write(1, 0, 10)
+	if err != nil {
+		t.Fatal(err)
+	}
 
-	mmu.Fork(1, 2)
+	err = mmu.Write(
+		1,
+		0,
+		10,
+	)
 
-	before, _ := mmu.Resolve(1)
-	shared := before.Page
+	if err != nil {
+		t.Fatal(err)
+	}
 
-	mmu.Write(2, 0, 99)
+	err = mmu.Fork(
+		1,
+		2,
+	)
 
-	after, _ := mmu.Resolve(2)
+	if err != nil {
+		t.Fatal(err)
+	}
 
-	if shared == after.Page {
-		t.Fatal("copy-on-write failed")
+	err = mmu.Write(
+		2,
+		0,
+		99,
+	)
+
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	parent, _ := mmu.Read(
+		1,
+		0,
+	)
+
+	child, _ := mmu.Read(
+		2,
+		0,
+	)
+
+	if parent != 10 {
+		t.Fatal("parent corrupted")
+	}
+
+	if child != 99 {
+		t.Fatal("cow failed")
 	}
 }

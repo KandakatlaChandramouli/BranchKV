@@ -1,6 +1,16 @@
 package virtual_mem
 
-type VirtualDescriptor struct {
-	LogicalID uint64
-	Page      *PhysicalPage
+func NewDescriptor(
+	virtual uint64,
+	physical uint64,
+	offset uint64,
+	length uint64,
+) VirtualDescriptor {
+
+	return VirtualDescriptor{
+		VirtualPageID:  virtual,
+		PhysicalPageID: physical,
+		Offset:         offset,
+		Length:         length,
+	}
 }

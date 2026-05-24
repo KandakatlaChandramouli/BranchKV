@@ -7,43 +7,62 @@ import (
 	"testing"
 )
 
-func BenchmarkTrieInsert(b *testing.B) {
+func BenchmarkTrieInsert(
+	b *testing.B,
+) {
 
 	rt := tree.NewRadixTree()
 
 	mmu := virtual_mem.NewMMU()
 
+	desc, _ := mmu.AllocateDescriptor(
+		1,
+		128,
+	)
+
 	seq := []types.TokenID{
-		1, 2, 3, 4, 5, 6, 7, 8,
+		1, 2, 3, 4,
 	}
 
 	b.ResetTimer()
 
 	for i := 0; i < b.N; i++ {
 
-		desc := mmu.Allocate(uint64(i+1), 512)
-
-		rt.Insert(seq, desc)
+		rt.Insert(
+			seq,
+			desc,
+		)
 	}
 }
 
-func BenchmarkTrieSearch(b *testing.B) {
+func BenchmarkTrieSearch(
+	b *testing.B,
+) {
 
 	rt := tree.NewRadixTree()
 
 	mmu := virtual_mem.NewMMU()
 
+	desc, _ := mmu.AllocateDescriptor(
+		1,
+		128,
+	)
+
 	seq := []types.TokenID{
-		1, 2, 3, 4, 5, 6, 7, 8,
+		1, 2, 3, 4,
 	}
 
-	desc := mmu.Allocate(1, 512)
-
-	rt.Insert(seq, desc)
+	rt.Insert(
+		seq,
+		desc,
+	)
 
 	b.ResetTimer()
 
 	for i := 0; i < b.N; i++ {
-		rt.Search(seq)
+
+		_, _ = rt.Search(
+			seq,
+		)
 	}
 }
