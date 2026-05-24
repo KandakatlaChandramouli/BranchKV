@@ -1,0 +1,9 @@
+#!/bin/bash
+
+go fmt ./...
+
+go vet ./...
+
+go test ./...
+
+go run ./cmd
