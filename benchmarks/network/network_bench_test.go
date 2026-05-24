@@ -1,15 +1,15 @@
-package benchmarks
+package network
 
 import (
 	"branchkv-core/internal/ringbuffer"
 	"testing"
 )
 
-func BenchmarkRingBuffer(
+func BenchmarkNetworkRuntime(
 	b *testing.B,
 ) {
 
-	ring := ringbuffer.NewRingBuffer(1024)
+	r := ringbuffer.NewRingBuffer(1024)
 
 	payload := []byte("runtime")
 
@@ -17,8 +17,8 @@ func BenchmarkRingBuffer(
 
 	for i := 0; i < b.N; i++ {
 
-		ring.Push(payload)
+		r.Push(payload)
 
-		_ = ring.Pop()
+		_ = r.Pop()
 	}
 }

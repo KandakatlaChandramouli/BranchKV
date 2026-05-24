@@ -9,17 +9,13 @@ func TestRingBuffer(
 	t *testing.T,
 ) {
 
-	r := ringbuffer.NewRingBuffer[int](16)
+	r := ringbuffer.NewRingBuffer(4)
 
-	r.Push(42)
+	r.Push([]byte("a"))
 
-	v, ok := r.Pop()
+	out := r.Pop()
 
-	if !ok {
-		t.Fatal("pop failed")
-	}
-
-	if v != 42 {
-		t.Fatal("invalid value")
+	if string(out) != "a" {
+		t.Fatal("ring failed")
 	}
 }

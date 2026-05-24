@@ -1,51 +1,39 @@
 package ringbuffer
 
-import (
-	"sync/atomic"
-)
-
-type RingBuffer[T any] struct {
-	buffer []T
-	size   uint64
-
-	head atomic.Uint64
-	tail atomic.Uint64
+type RingBuffer struct {
+	data [][]byte
+	head int
+	tail int
+	size int
 }
 
-func NewRingBuffer[T any](
-	size uint64,
-) *RingBuffer[T] {
+func NewRingBuffer(
+	size int,
+) *RingBuffer {
 
-	return &RingBuffer[T]{
-		buffer: make([]T, size),
-		size:   size,
+	return &RingBuffer{
+		data: make(
+			[][]byte,
+			size,
+		),
+		size: size,
 	}
 }
 
-func (r *RingBuffer[T]) Push(
-	v T,
+func (r *RingBuffer) Push(
+	v []byte,
 ) {
 
-	tail := r.tail.Load()
+	r.data[r.tail] = v
 
-	r.buffer[tail%r.size] = v
-
-	r.tail.Add(1)
+	r.tail = (r.tail + 1) % r.size
 }
 
-func (r *RingBuffer[T]) Pop() (T, bool) {
+func (r *RingBuffer) Pop() []byte {
 
-	var zero T
+	v := r.data[r.head]
 
-	head := r.head.Load()
+	r.head = (r.head + 1) % r.size
 
-	if head >= r.tail.Load() {
-		return zero, false
-	}
-
-	v := r.buffer[head%r.size]
-
-	r.head.Add(1)
-
-	return v, true
+	return v
 }
