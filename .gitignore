@@ -5,3 +5,14 @@ dist/
 coverage.out
 *.prof
 vendor/
+
+# runtime artifacts
+*.wal
+*.mmap
+*.gob
+*.prof
+
+# benchmark outputs
+benchmarks/*.wal
+benchmarks/*.mmap
+benchmarks/*.gob
