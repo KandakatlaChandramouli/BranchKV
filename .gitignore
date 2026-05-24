@@ -16,3 +16,15 @@ vendor/
 benchmarks/*.wal
 benchmarks/*.mmap
 benchmarks/*.gob
+
+# runtime artifacts
+*.wal
+*.mmap
+*.gob
+*.prof
+*.test
+
+# benchmark outputs
+benchmarks/**/*.wal
+benchmarks/**/*.mmap
+benchmarks/**/*.gob
