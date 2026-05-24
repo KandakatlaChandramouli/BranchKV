@@ -4,13 +4,18 @@ import (
 	"sync/atomic"
 )
 
+const CacheLinePad = 64
+
 type PhysicalPage struct {
 	ID       uint64
 	RefCount atomic.Int64
 	Data     []float32
+
+	_ [CacheLinePad]byte
 }
 
 func NewPhysicalPage(id uint64, size int) *PhysicalPage {
+
 	p := &PhysicalPage{
 		ID:   id,
 		Data: make([]float32, size),
