@@ -2,15 +2,17 @@
 
 echo "=== CPU PROFILE ==="
 
-go test -bench=. \
+go test \
+-bench=. \
 -cpuprofile cpu.prof \
-./benchmarks/...
+./benchmarks
 
 echo "=== MEMORY PROFILE ==="
 
-go test -bench=. \
+go test \
+-bench=. \
 -memprofile mem.prof \
-./benchmarks/...
+./benchmarks
 
 echo "=== TOP CPU ==="
 
