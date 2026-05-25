@@ -2,16 +2,21 @@ package generation
 
 import "sync/atomic"
 
-type Generator struct {
-	next atomic.Uint64
+type Counter struct {
+	value atomic.Uint64
 }
 
-func NewGenerator() *Generator {
+func NewCounter() *Counter {
 
-	return &Generator{}
+	return &Counter{}
 }
 
-func (g *Generator) Next() uint64 {
+func (c *Counter) Next() uint64 {
 
-	return g.next.Add(1)
+	return c.value.Add(1)
+}
+
+func (c *Counter) Current() uint64 {
+
+	return c.value.Load()
 }
