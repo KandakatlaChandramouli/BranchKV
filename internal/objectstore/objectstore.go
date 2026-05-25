@@ -1,4 +1,4 @@
-package sharding
+package objectstore
 
 type Runtime struct {
 	count int

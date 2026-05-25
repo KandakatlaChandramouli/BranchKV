@@ -1,4 +1,4 @@
-package sharding
+package graphindex
 
 type Runtime struct {
 	count int

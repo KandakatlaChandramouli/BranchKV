@@ -1,4 +1,4 @@
-package sharding
+package querycache
 
 type Runtime struct {
 	count int

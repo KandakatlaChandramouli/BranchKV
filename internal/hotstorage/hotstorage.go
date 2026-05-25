@@ -1,4 +1,4 @@
-package sharding
+package hotstorage
 
 type Runtime struct {
 	count int

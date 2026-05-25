@@ -1,4 +1,4 @@
-package sharding
+package columnstore
 
 type Runtime struct {
 	count int

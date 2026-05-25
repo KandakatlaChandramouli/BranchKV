@@ -1,34 +1,39 @@
 package replication
 
-import (
-	"branchkv-core/internal/network"
-	"sync"
-)
+import "branchkv-core/internal/network"
 
 type Replicator struct {
-	log []network.Message
-	mu  sync.Mutex
+	count int
 }
 
 func NewReplicator() *Replicator {
 
-	return &Replicator{
-		log: make(
-			[]network.Message,
-			0,
-		),
-	}
+	return &Replicator{}
 }
 
 func (r *Replicator) Replicate(
-	msg network.Message,
+	_ network.Message,
 ) {
+	r.count++
+}
 
-	r.mu.Lock()
-	defer r.mu.Unlock()
+func (r *Replicator) Size() int {
+	return r.count
+}
 
-	r.log = append(
-		r.log,
-		msg,
-	)
+type Runtime struct {
+	count int
+}
+
+func NewRuntime() *Runtime {
+
+	return &Runtime{}
+}
+
+func (r *Runtime) Add() {
+	r.count++
+}
+
+func (r *Runtime) Size() int {
+	return r.count
 }

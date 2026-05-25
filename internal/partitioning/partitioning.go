@@ -1,4 +1,4 @@
-package sharding
+package partitioning
 
 type Runtime struct {
 	count int
