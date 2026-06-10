@@ -1,0 +1,786 @@
+ok  	branchkv-core/benchmarks	(cached) [no tests to run]
+ok  	branchkv-core/benchmarks/concurrent	(cached) [no tests to run]
+ok  	branchkv-core/benchmarks/controlplane	(cached) [no tests to run]
+ok  	branchkv-core/benchmarks/cuda	(cached) [no tests to run]
+ok  	branchkv-core/benchmarks/decoder	(cached) [no tests to run]
+ok  	branchkv-core/benchmarks/distributed	(cached) [no tests to run]
+ok  	branchkv-core/benchmarks/distributed_checkpoint	(cached) [no tests to run]
+ok  	branchkv-core/benchmarks/distributed_storage	(cached) [no tests to run]
+ok  	branchkv-core/benchmarks/execution	(cached) [no tests to run]
+ok  	branchkv-core/benchmarks/fabric	(cached) [no tests to run]
+ok  	branchkv-core/benchmarks/flashattention	(cached) [no tests to run]
+ok  	branchkv-core/benchmarks/hyper	(cached) [no tests to run]
+ok  	branchkv-core/benchmarks/kernel	(cached) [no tests to run]
+ok  	branchkv-core/benchmarks/lsm	(cached) [no tests to run]
+ok  	branchkv-core/benchmarks/mega	(cached) [no tests to run]
+ok  	branchkv-core/benchmarks/memory	(cached) [no tests to run]
+ok  	branchkv-core/benchmarks/mmu	(cached) [no tests to run]
+ok  	branchkv-core/benchmarks/network	(cached) [no tests to run]
+ok  	branchkv-core/benchmarks/omega	(cached) [no tests to run]
+ok  	branchkv-core/benchmarks/os	(cached) [no tests to run]
+ok  	branchkv-core/benchmarks/pipeline	(cached) [no tests to run]
+ok  	branchkv-core/benchmarks/runtime	(cached) [no tests to run]
+ok  	branchkv-core/benchmarks/scheduler	(cached) [no tests to run]
+ok  	branchkv-core/benchmarks/speculative	(cached) [no tests to run]
+ok  	branchkv-core/benchmarks/storage	(cached) [no tests to run]
+ok  	branchkv-core/benchmarks/storage_engine	(cached) [no tests to run]
+ok  	branchkv-core/benchmarks/tensor	(cached) [no tests to run]
+ok  	branchkv-core/benchmarks/transformer	(cached) [no tests to run]
+ok  	branchkv-core/benchmarks/ultra	(cached) [no tests to run]
+?   	branchkv-core/cmd	[no test files]
+?   	branchkv-core/demos/controlplane_runtime	[no test files]
+?   	branchkv-core/demos/distributed_runtime	[no test files]
+?   	branchkv-core/demos/distributed_storage_runtime	[no test files]
+?   	branchkv-core/demos/execution_runtime	[no test files]
+?   	branchkv-core/demos/flash_runtime	[no test files]
+?   	branchkv-core/demos/gpu_fabric	[no test files]
+?   	branchkv-core/demos/hyper_runtime	[no test files]
+?   	branchkv-core/demos/inference_engine	[no test files]
+?   	branchkv-core/demos/kernel_runtime	[no test files]
+?   	branchkv-core/demos/lsm_runtime	[no test files]
+?   	branchkv-core/demos/mega_runtime	[no test files]
+?   	branchkv-core/demos/memory_runtime	[no test files]
+?   	branchkv-core/demos/mlsys_runtime	[no test files]
+?   	branchkv-core/demos/mmu_runtime	[no test files]
+?   	branchkv-core/demos/multigpu_runtime	[no test files]
+?   	branchkv-core/demos/network_runtime	[no test files]
+?   	branchkv-core/demos/omega_runtime	[no test files]
+?   	branchkv-core/demos/orchestrator	[no test files]
+?   	branchkv-core/demos/research_os	[no test files]
+?   	branchkv-core/demos/runtime	[no test files]
+?   	branchkv-core/demos/scheduler_runtime	[no test files]
+?   	branchkv-core/demos/speculative_decoder	[no test files]
+?   	branchkv-core/demos/storage_engine_runtime	[no test files]
+?   	branchkv-core/demos/storage_runtime	[no test files]
+?   	branchkv-core/demos/tensor_runtime	[no test files]
+?   	branchkv-core/demos/transformer_runtime	[no test files]
+?   	branchkv-core/demos/ultra_runtime	[no test files]
+?   	branchkv-core/demos/unsafe	[no test files]
+?   	branchkv-core/internal/activation	[no test files]
+?   	branchkv-core/internal/admissioncontrol	[no test files]
+?   	branchkv-core/internal/allocator	[no test files]
+?   	branchkv-core/internal/allocator_rt	[no test files]
+?   	branchkv-core/internal/allocatorgraph	[no test files]
+?   	branchkv-core/internal/allreduce	[no test files]
+?   	branchkv-core/internal/arena	[no test files]
+ok  	branchkv-core/internal/arena/tests	(cached)
+?   	branchkv-core/internal/attentioncache	[no test files]
+?   	branchkv-core/internal/autoscaler	[no test files]
+?   	branchkv-core/internal/backingstore	[no test files]
+?   	branchkv-core/internal/backpressure	[no test files]
+?   	branchkv-core/internal/beamsearch	[no test files]
+ok  	branchkv-core/internal/beamsearch/tests	(cached)
+?   	branchkv-core/internal/blocktable	[no test files]
+?   	branchkv-core/internal/bloom	[no test files]
+ok  	branchkv-core/internal/bloom/tests	(cached)
+?   	branchkv-core/internal/bloomfilter	[no test files]
+ok  	branchkv-core/internal/bloomfilter/tests	(cached)
+?   	branchkv-core/internal/branch_predictor	[no test files]
+?   	branchkv-core/internal/branchcache	[no test files]
+ok  	branchkv-core/internal/branchcache/tests	(cached)
+?   	branchkv-core/internal/branchgraph	[no test files]
+?   	branchkv-core/internal/branchpredictor_rt	[no test files]
+?   	branchkv-core/internal/branchrecovery	[no test files]
+?   	branchkv-core/internal/branchscheduler	[no test files]
+?   	branchkv-core/internal/buddyallocator	[no test files]
+ok  	branchkv-core/internal/buddyallocator/tests	(cached)
+?   	branchkv-core/internal/cache	[no test files]
+ok  	branchkv-core/internal/cache/tests	(cached)
+?   	branchkv-core/internal/cacheline	[no test files]
+?   	branchkv-core/internal/checkpoint	[no test files]
+?   	branchkv-core/internal/checkpointfabric	[no test files]
+?   	branchkv-core/internal/checkpointgc	[no test files]
+?   	branchkv-core/internal/checkpointing	[no test files]
+?   	branchkv-core/internal/checkpointlog	[no test files]
+?   	branchkv-core/internal/checksum	[no test files]
+ok  	branchkv-core/internal/checksum/tests	(cached)
+?   	branchkv-core/internal/clocksource	[no test files]
+?   	branchkv-core/internal/cluster	[no test files]
+ok  	branchkv-core/internal/cluster/tests	(cached)
+?   	branchkv-core/internal/columnstore	[no test files]
+?   	branchkv-core/internal/compaction	[no test files]
+?   	branchkv-core/internal/compactionplanner	[no test files]
+?   	branchkv-core/internal/compactor	[no test files]
+?   	branchkv-core/internal/concurrent	[no test files]
+ok  	branchkv-core/internal/concurrent/tests	(cached)
+?   	branchkv-core/internal/connectionpool	[no test files]
+?   	branchkv-core/internal/consensus	[no test files]
+ok  	branchkv-core/internal/consensus/tests	(cached)
+?   	branchkv-core/internal/continuousbatching	[no test files]
+?   	branchkv-core/internal/controlplane	[no test files]
+ok  	branchkv-core/internal/controlplane/tests	(cached)
+?   	branchkv-core/internal/coroutines	[no test files]
+?   	branchkv-core/internal/cpuset	[no test files]
+?   	branchkv-core/internal/cuda	[no test files]
+ok  	branchkv-core/internal/cuda/tests	(cached)
+?   	branchkv-core/internal/dag	[no test files]
+?   	branchkv-core/internal/deadlockdetector	[no test files]
+?   	branchkv-core/internal/decoder	[no test files]
+ok  	branchkv-core/internal/decoder/tests	(cached)
+?   	branchkv-core/internal/dispatch	[no test files]
+?   	branchkv-core/internal/distributedpager	[no test files]
+?   	branchkv-core/internal/distributedwal	[no test files]
+?   	branchkv-core/internal/dma	[no test files]
+?   	branchkv-core/internal/embedding	[no test files]
+ok  	branchkv-core/internal/embedding/tests	(cached)
+?   	branchkv-core/internal/epoch	[no test files]
+?   	branchkv-core/internal/epochgc	[no test files]
+?   	branchkv-core/internal/eventbus	[no test files]
+ok  	branchkv-core/internal/eventbus/tests	(cached)
+?   	branchkv-core/internal/eviction	[no test files]
+?   	branchkv-core/internal/executiongraph	[no test files]
+ok  	branchkv-core/internal/executiongraph/tests	(cached)
+?   	branchkv-core/internal/executionplanner	[no test files]
+?   	branchkv-core/internal/executor	[no test files]
+ok  	branchkv-core/internal/executor/tests	(cached)
+ok  	branchkv-core/internal/experiments/branch_scaling	(cached) [no tests to run]
+ok  	branchkv-core/internal/experiments/epoch_scaling	(cached) [no tests to run]
+ok  	branchkv-core/internal/experiments/numa_scaling	(cached) [no tests to run]
+ok  	branchkv-core/internal/experiments/rollback_scaling	(cached) [no tests to run]
+ok  	branchkv-core/internal/experiments/snapshot_scaling	(cached) [no tests to run]
+?   	branchkv-core/internal/fabric	[no test files]
+?   	branchkv-core/internal/failover	[no test files]
+ok  	branchkv-core/internal/failover/tests	(cached)
+?   	branchkv-core/internal/failureinjector	[no test files]
+?   	branchkv-core/internal/failurematrix	[no test files]
+?   	branchkv-core/internal/fdtable	[no test files]
+?   	branchkv-core/internal/filesystem	[no test files]
+ok  	branchkv-core/internal/filesystem/tests	(cached)
+?   	branchkv-core/internal/flashattention	[no test files]
+ok  	branchkv-core/internal/flashattention/tests	(cached)
+?   	branchkv-core/internal/freelist	[no test files]
+ok  	branchkv-core/internal/freelist/tests	(cached)
+?   	branchkv-core/internal/futures	[no test files]
+ok  	branchkv-core/internal/futures/tests	(cached)
+?   	branchkv-core/internal/gpu	[no test files]
+ok  	branchkv-core/internal/gpu/tests	(cached)
+?   	branchkv-core/internal/gpu_scheduler	[no test files]
+?   	branchkv-core/internal/gpumemory	[no test files]
+ok  	branchkv-core/internal/gpumemory/tests	(cached)
+?   	branchkv-core/internal/graphindex	[no test files]
+?   	branchkv-core/internal/grpcpool	[no test files]
+?   	branchkv-core/internal/heapindex	[no test files]
+?   	branchkv-core/internal/heartbeat	[no test files]
+?   	branchkv-core/internal/hotstorage	[no test files]
+?   	branchkv-core/internal/hypervisor	[no test files]
+ok  	branchkv-core/internal/hypervisor/tests	(cached)
+?   	branchkv-core/internal/interrupt	[no test files]
+?   	branchkv-core/internal/interruptcontroller	[no test files]
+?   	branchkv-core/internal/io_uring	[no test files]
+?   	branchkv-core/internal/ioqueue	[no test files]
+?   	branchkv-core/internal/journal	[no test files]
+?   	branchkv-core/internal/kernel_bypass	[no test files]
+?   	branchkv-core/internal/kernelcache	[no test files]
+ok  	branchkv-core/internal/kernelcache/tests	(cached)
+?   	branchkv-core/internal/kernelruntime	[no test files]
+?   	branchkv-core/internal/kvpager	[no test files]
+ok  	branchkv-core/internal/kvpager/tests	(cached)
+?   	branchkv-core/internal/kvstore_rt	[no test files]
+?   	branchkv-core/internal/latencymap	[no test files]
+?   	branchkv-core/internal/layernorm	[no test files]
+ok  	branchkv-core/internal/layernorm/tests	(cached)
+?   	branchkv-core/internal/leaderlease	[no test files]
+?   	branchkv-core/internal/loadbalancer	[no test files]
+ok  	branchkv-core/internal/loadbalancer/tests	(cached)
+?   	branchkv-core/internal/lockfreequeue	[no test files]
+ok  	branchkv-core/internal/lockfreequeue/tests	(cached)
+?   	branchkv-core/internal/logshipping	[no test files]
+?   	branchkv-core/internal/logstructured	[no test files]
+?   	branchkv-core/internal/lsm	[no test files]
+ok  	branchkv-core/internal/lsm/tests	(cached)
+?   	branchkv-core/internal/lsmtree	[no test files]
+ok  	branchkv-core/internal/lsmtree/tests	(cached)
+?   	branchkv-core/internal/manifest	[no test files]
+?   	branchkv-core/internal/matmul	[no test files]
+ok  	branchkv-core/internal/matmul/tests	(cached)
+?   	branchkv-core/internal/memoryarena	[no test files]
+ok  	branchkv-core/internal/memoryarena/tests	(cached)
+?   	branchkv-core/internal/memorymap	[no test files]
+?   	branchkv-core/internal/memtable	[no test files]
+?   	branchkv-core/internal/metrics	[no test files]
+ok  	branchkv-core/internal/metrics/tests	(cached)
+?   	branchkv-core/internal/mixtureofexperts	[no test files]
+ok  	branchkv-core/internal/mixtureofexperts/tests	(cached)
+?   	branchkv-core/internal/mmap	[no test files]
+ok  	branchkv-core/internal/mmap/tests	0.007s
+?   	branchkv-core/internal/mmapengine	[no test files]
+ok  	branchkv-core/internal/mmapengine/tests	0.010s
+?   	branchkv-core/internal/multiversion	[no test files]
+?   	branchkv-core/internal/nccl	[no test files]
+ok  	branchkv-core/internal/nccl/tests	(cached)
+?   	branchkv-core/internal/network	[no test files]
+?   	branchkv-core/internal/node	[no test files]
+?   	branchkv-core/internal/nodemanager	[no test files]
+?   	branchkv-core/internal/numa	[no test files]
+?   	branchkv-core/internal/numacontroller	[no test files]
+?   	branchkv-core/internal/nvlink	[no test files]
+?   	branchkv-core/internal/objectcache	[no test files]
+?   	branchkv-core/internal/objectpool_rt	[no test files]
+?   	branchkv-core/internal/objectreplication	[no test files]
+?   	branchkv-core/internal/objectstore	[no test files]
+ok  	branchkv-core/internal/objectstore/tests	(cached)
+?   	branchkv-core/internal/operator_fusion	[no test files]
+ok  	branchkv-core/internal/operator_fusion/tests	(cached)
+?   	branchkv-core/internal/pageallocator	[no test files]
+?   	branchkv-core/internal/pagecache	[no test files]
+ok  	branchkv-core/internal/pagecache/tests	(cached)
+?   	branchkv-core/internal/pagecompressor	[no test files]
+?   	branchkv-core/internal/pagedattention	[no test files]
+?   	branchkv-core/internal/pageeviction	[no test files]
+?   	branchkv-core/internal/pagefault	[no test files]
+?   	branchkv-core/internal/pagejournal	[no test files]
+?   	branchkv-core/internal/pager	[no test files]
+?   	branchkv-core/internal/pagewalker	[no test files]
+?   	branchkv-core/internal/partitioning	[no test files]
+?   	branchkv-core/internal/pipeline	[no test files]
+?   	branchkv-core/internal/pipelinecache	[no test files]
+?   	branchkv-core/internal/pipelineparallel	[no test files]
+?   	branchkv-core/internal/pool	[no test files]
+?   	branchkv-core/internal/preemption	[no test files]
+?   	branchkv-core/internal/prefetch	[no test files]
+?   	branchkv-core/internal/prefetchqueue	[no test files]
+?   	branchkv-core/internal/prefixcache	[no test files]
+ok  	branchkv-core/internal/prefixcache/tests	(cached)
+?   	branchkv-core/internal/priorityqueue	[no test files]
+?   	branchkv-core/internal/process	[no test files]
+ok  	branchkv-core/internal/process/tests	(cached)
+?   	branchkv-core/internal/querycache	[no test files]
+?   	branchkv-core/internal/queryplanner	[no test files]
+?   	branchkv-core/internal/raft	[no test files]
+ok  	branchkv-core/internal/raft/tests	(cached)
+?   	branchkv-core/internal/raftlog	[no test files]
+ok  	branchkv-core/internal/raftlog/tests	(cached)
+?   	branchkv-core/internal/ratelimiter	[no test files]
+ok  	branchkv-core/internal/ratelimiter/tests	(cached)
+?   	branchkv-core/internal/rdma	[no test files]
+ok  	branchkv-core/internal/rdma/tests	(cached)
+?   	branchkv-core/internal/rdmabridge	[no test files]
+?   	branchkv-core/internal/rdmafabric	[no test files]
+?   	branchkv-core/internal/readahead	[no test files]
+?   	branchkv-core/internal/rebalance	[no test files]
+?   	branchkv-core/internal/recovery	[no test files]
+ok  	branchkv-core/internal/recovery/tests	(cached)
+?   	branchkv-core/internal/recoverylog	[no test files]
+?   	branchkv-core/internal/replayengine	[no test files]
+?   	branchkv-core/internal/replication	[no test files]
+ok  	branchkv-core/internal/replication/tests	(cached)
+?   	branchkv-core/internal/ringbuffer	[no test files]
+ok  	branchkv-core/internal/ringbuffer/tests	(cached)
+?   	branchkv-core/internal/rope	[no test files]
+?   	branchkv-core/internal/router	[no test files]
+ok  	branchkv-core/internal/router/tests	(cached)
+?   	branchkv-core/internal/router_moe	[no test files]
+?   	branchkv-core/internal/rpc	[no test files]
+ok  	branchkv-core/internal/rpc/tests	(cached)
+?   	branchkv-core/internal/runqueue	[no test files]
+?   	branchkv-core/internal/runtime	[no test files]
+?   	branchkv-core/internal/runtime_compiler	[no test files]
+?   	branchkv-core/internal/runtime_gc	[no test files]
+?   	branchkv-core/internal/runtime_profiler	[no test files]
+?   	branchkv-core/internal/runtime_state	[no test files]
+?   	branchkv-core/internal/runtimeallocator	[no test files]
+?   	branchkv-core/internal/runtimeallocator_v2	[no test files]
+?   	branchkv-core/internal/runtimeallocator_v3	[no test files]
+?   	branchkv-core/internal/runtimeallocator_v4	[no test files]
+?   	branchkv-core/internal/runtimeanalytics	[no test files]
+?   	branchkv-core/internal/runtimeanalytics_v2	[no test files]
+?   	branchkv-core/internal/runtimeaudit	[no test files]
+?   	branchkv-core/internal/runtimebalancer	[no test files]
+?   	branchkv-core/internal/runtimebalancing	[no test files]
+?   	branchkv-core/internal/runtimebranch	[no test files]
+?   	branchkv-core/internal/runtimebus	[no test files]
+?   	branchkv-core/internal/runtimecache	[no test files]
+?   	branchkv-core/internal/runtimecheckpoint	[no test files]
+?   	branchkv-core/internal/runtimecluster	[no test files]
+?   	branchkv-core/internal/runtimecluster_v2	[no test files]
+?   	branchkv-core/internal/runtimecluster_v3	[no test files]
+?   	branchkv-core/internal/runtimecompactor	[no test files]
+?   	branchkv-core/internal/runtimecoordination	[no test files]
+?   	branchkv-core/internal/runtimecoordination_v2	[no test files]
+?   	branchkv-core/internal/runtimecoordinator	[no test files]
+?   	branchkv-core/internal/runtimecpu	[no test files]
+?   	branchkv-core/internal/runtimeepoch	[no test files]
+?   	branchkv-core/internal/runtimeevents	[no test files]
+?   	branchkv-core/internal/runtimeexecutor	[no test files]
+?   	branchkv-core/internal/runtimeexecutor_v2	[no test files]
+?   	branchkv-core/internal/runtimeexecutor_v3	[no test files]
+?   	branchkv-core/internal/runtimefabric	[no test files]
+?   	branchkv-core/internal/runtimefabric_v2	[no test files]
+?   	branchkv-core/internal/runtimefabric_v3	[no test files]
+?   	branchkv-core/internal/runtimefailover	[no test files]
+?   	branchkv-core/internal/runtimefailuredomain	[no test files]
+?   	branchkv-core/internal/runtimefailuredomain_v2	[no test files]
+?   	branchkv-core/internal/runtimeflush	[no test files]
+?   	branchkv-core/internal/runtimegateway	[no test files]
+?   	branchkv-core/internal/runtimegc	[no test files]
+?   	branchkv-core/internal/runtimegc_v2	[no test files]
+?   	branchkv-core/internal/runtimegc_v3	[no test files]
+?   	branchkv-core/internal/runtimegpu	[no test files]
+?   	branchkv-core/internal/runtimegpu_v2	[no test files]
+?   	branchkv-core/internal/runtimegpu_v3	[no test files]
+?   	branchkv-core/internal/runtimegraph	[no test files]
+?   	branchkv-core/internal/runtimegraph_v2	[no test files]
+?   	branchkv-core/internal/runtimegraph_v3	[no test files]
+?   	branchkv-core/internal/runtimegraph_v4	[no test files]
+?   	branchkv-core/internal/runtimeindex	[no test files]
+?   	branchkv-core/internal/runtimeinference	[no test files]
+?   	branchkv-core/internal/runtimeinference_v2	[no test files]
+?   	branchkv-core/internal/runtimeinference_v3	[no test files]
+?   	branchkv-core/internal/runtimejournal	[no test files]
+?   	branchkv-core/internal/runtimekernel	[no test files]
+?   	branchkv-core/internal/runtimekernel_v2	[no test files]
+?   	branchkv-core/internal/runtimekernel_v3	[no test files]
+?   	branchkv-core/internal/runtimekernelcache	[no test files]
+?   	branchkv-core/internal/runtimememory	[no test files]
+?   	branchkv-core/internal/runtimemigration	[no test files]
+?   	branchkv-core/internal/runtimeobserver	[no test files]
+?   	branchkv-core/internal/runtimeorchestrator	[no test files]
+?   	branchkv-core/internal/runtimepager	[no test files]
+?   	branchkv-core/internal/runtimepages	[no test files]
+?   	branchkv-core/internal/runtimepages_v2	[no test files]
+?   	branchkv-core/internal/runtimepages_v3	[no test files]
+?   	branchkv-core/internal/runtimepanic	[no test files]
+?   	branchkv-core/internal/runtimepipeline	[no test files]
+?   	branchkv-core/internal/runtimepipeline_v2	[no test files]
+?   	branchkv-core/internal/runtimeplanner	[no test files]
+?   	branchkv-core/internal/runtimepool	[no test files]
+?   	branchkv-core/internal/runtimepredictor	[no test files]
+?   	branchkv-core/internal/runtimepredictor_v2	[no test files]
+?   	branchkv-core/internal/runtimeprefetch	[no test files]
+?   	branchkv-core/internal/runtimequeue	[no test files]
+?   	branchkv-core/internal/runtimequeue_v2	[no test files]
+?   	branchkv-core/internal/runtimesnapshot	[no test files]
+?   	branchkv-core/internal/runtimestats	[no test files]
+?   	branchkv-core/internal/runtimestream	[no test files]
+?   	branchkv-core/internal/runtimetensor	[no test files]
+?   	branchkv-core/internal/runtimetensor_v2	[no test files]
+?   	branchkv-core/internal/runtimetensor_v3	[no test files]
+?   	branchkv-core/internal/runtimetracer	[no test files]
+?   	branchkv-core/internal/runtimetransaction	[no test files]
+?   	branchkv-core/internal/runtimevector	[no test files]
+?   	branchkv-core/internal/runtimewal	[no test files]
+?   	branchkv-core/internal/runtimewatchdog	[no test files]
+?   	branchkv-core/internal/runtimeworker	[no test files]
+?   	branchkv-core/internal/safepoint	[no test files]
+?   	branchkv-core/internal/scheduler	[no test files]
+?   	branchkv-core/internal/scheduler_rt	[no test files]
+?   	branchkv-core/internal/segment	[no test files]
+?   	branchkv-core/internal/segmentcache	[no test files]
+?   	branchkv-core/internal/segmentmanager	[no test files]
+?   	branchkv-core/internal/segmenttree	[no test files]
+?   	branchkv-core/internal/servicediscovery	[no test files]
+ok  	branchkv-core/internal/servicediscovery/tests	(cached)
+?   	branchkv-core/internal/servicemesh	[no test files]
+?   	branchkv-core/internal/sharding	[no test files]
+?   	branchkv-core/internal/signalbus	[no test files]
+?   	branchkv-core/internal/simd	[no test files]
+ok  	branchkv-core/internal/simd/tests	(cached)
+?   	branchkv-core/internal/slaballocator	[no test files]
+ok  	branchkv-core/internal/slaballocator/tests	(cached)
+?   	branchkv-core/internal/slowsync	[no test files]
+?   	branchkv-core/internal/snapshot	[no test files]
+ok  	branchkv-core/internal/snapshot/tests	0.006s
+?   	branchkv-core/internal/snapshot_delta	[no test files]
+?   	branchkv-core/internal/snapshotstream	[no test files]
+?   	branchkv-core/internal/softmax	[no test files]
+ok  	branchkv-core/internal/softmax/tests	(cached)
+?   	branchkv-core/internal/specdecoder	[no test files]
+ok  	branchkv-core/internal/specdecoder/tests	(cached)
+?   	branchkv-core/internal/speculative	[no test files]
+ok  	branchkv-core/internal/speculative/tests	(cached)
+?   	branchkv-core/internal/sstable	[no test files]
+ok  	branchkv-core/internal/sstable/tests	(cached)
+?   	branchkv-core/internal/state_machine	[no test files]
+ok  	branchkv-core/internal/state_machine/tests	(cached)
+?   	branchkv-core/internal/state_sync	[no test files]
+?   	branchkv-core/internal/streamexecutor	[no test files]
+?   	branchkv-core/internal/streaming	[no test files]
+ok  	branchkv-core/internal/streaming/tests	(cached)
+?   	branchkv-core/internal/syscall	[no test files]
+?   	branchkv-core/internal/sysmonitor	[no test files]
+?   	branchkv-core/internal/tablecache	[no test files]
+?   	branchkv-core/internal/taskqueue	[no test files]
+ok  	branchkv-core/internal/taskqueue/tests	(cached)
+?   	branchkv-core/internal/telemetry	[no test files]
+?   	branchkv-core/internal/telemetrybus	[no test files]
+?   	branchkv-core/internal/tensor	[no test files]
+ok  	branchkv-core/internal/tensor/tests	(cached)
+?   	branchkv-core/internal/tensorfabric	[no test files]
+?   	branchkv-core/internal/tensorgraph	[no test files]
+?   	branchkv-core/internal/tensorparallel	[no test files]
+?   	branchkv-core/internal/tensorruntime	[no test files]
+?   	branchkv-core/internal/threading	[no test files]
+ok  	branchkv-core/internal/threading/tests	(cached)
+?   	branchkv-core/internal/threadpool	[no test files]
+?   	branchkv-core/internal/timeslice	[no test files]
+?   	branchkv-core/internal/tokenallocator	[no test files]
+?   	branchkv-core/internal/tokenizer	[no test files]
+ok  	branchkv-core/internal/tokenizer/tests	(cached)
+?   	branchkv-core/internal/tokenwindow	[no test files]
+ok  	branchkv-core/internal/tokenwindow/tests	(cached)
+?   	branchkv-core/internal/topology	[no test files]
+?   	branchkv-core/internal/trace	[no test files]
+ok  	branchkv-core/internal/trace/tests	(cached)
+?   	branchkv-core/internal/transactionlog	[no test files]
+?   	branchkv-core/internal/transformer	[no test files]
+?   	branchkv-core/internal/transport	[no test files]
+?   	branchkv-core/internal/tree	[no test files]
+ok  	branchkv-core/internal/tree/tests	(cached)
+?   	branchkv-core/internal/txn	[no test files]
+?   	branchkv-core/internal/types	[no test files]
+?   	branchkv-core/internal/unsafe_mem	[no test files]
+ok  	branchkv-core/internal/unsafe_mem/tests	(cached)
+?   	branchkv-core/internal/vectorcache	[no test files]
+?   	branchkv-core/internal/vectordb	[no test files]
+ok  	branchkv-core/internal/vectordb/tests	(cached)
+?   	branchkv-core/internal/vectorindex	[no test files]
+ok  	branchkv-core/internal/vectorindex/tests	(cached)
+?   	branchkv-core/internal/vectorruntime	[no test files]
+?   	branchkv-core/internal/vectorstore	[no test files]
+?   	branchkv-core/internal/virtual_mem	[no test files]
+?   	branchkv-core/internal/virtual_mem/address	[no test files]
+ok  	branchkv-core/internal/virtual_mem/addressresolver	(cached)
+ok  	branchkv-core/internal/virtual_mem/addressspace	(cached)
+ok  	branchkv-core/internal/virtual_mem/barrierqueue	(cached)
+ok  	branchkv-core/internal/virtual_mem/benchmarks	(cached) [no tests to run]
+?   	branchkv-core/internal/virtual_mem/brancharena	[no test files]
+ok  	branchkv-core/internal/virtual_mem/branchcommit	(cached)
+ok  	branchkv-core/internal/virtual_mem/branchconsensus	(cached)
+ok  	branchkv-core/internal/virtual_mem/branchconsistency	(cached)
+?   	branchkv-core/internal/virtual_mem/branchdelta	[no test files]
+?   	branchkv-core/internal/virtual_mem/branchgc	[no test files]
+?   	branchkv-core/internal/virtual_mem/branchhazard	[no test files]
+?   	branchkv-core/internal/virtual_mem/branchmap	[no test files]
+ok  	branchkv-core/internal/virtual_mem/branchmerger	(cached)
+?   	branchkv-core/internal/virtual_mem/branchqueue	[no test files]
+?   	branchkv-core/internal/virtual_mem/branchreclaim	[no test files]
+?   	branchkv-core/internal/virtual_mem/branchreconciliation	[no test files]
+ok  	branchkv-core/internal/virtual_mem/branchresolver	(cached)
+?   	branchkv-core/internal/virtual_mem/branchretire	[no test files]
+?   	branchkv-core/internal/virtual_mem/branchtlb	[no test files]
+?   	branchkv-core/internal/virtual_mem/branchtracker	[no test files]
+?   	branchkv-core/internal/virtual_mem/branchwalker	[no test files]
+?   	branchkv-core/internal/virtual_mem/cachecoherence	[no test files]
+ok  	branchkv-core/internal/virtual_mem/chaosfaults	(cached)
+ok  	branchkv-core/internal/virtual_mem/chaosinjection	(cached)
+ok  	branchkv-core/internal/virtual_mem/chaosrecovery	(cached)
+ok  	branchkv-core/internal/virtual_mem/chaosruntime	(cached)
+?   	branchkv-core/internal/virtual_mem/checkpointdelta	[no test files]
+?   	branchkv-core/internal/virtual_mem/concurrenttlb	[no test files]
+?   	branchkv-core/internal/virtual_mem/conflict	[no test files]
+?   	branchkv-core/internal/virtual_mem/consistencygraph	[no test files]
+?   	branchkv-core/internal/virtual_mem/cow	[no test files]
+?   	branchkv-core/internal/virtual_mem/cowcollapse	[no test files]
+?   	branchkv-core/internal/virtual_mem/cowdedup	[no test files]
+?   	branchkv-core/internal/virtual_mem/cowdirty	[no test files]
+?   	branchkv-core/internal/virtual_mem/cowfault	[no test files]
+?   	branchkv-core/internal/virtual_mem/cowlineage	[no test files]
+?   	branchkv-core/internal/virtual_mem/cowmerge	[no test files]
+?   	branchkv-core/internal/virtual_mem/cowownership	[no test files]
+?   	branchkv-core/internal/virtual_mem/dagallocator	[no test files]
+?   	branchkv-core/internal/virtual_mem/dagnodearena	[no test files]
+?   	branchkv-core/internal/virtual_mem/deferredfree	[no test files]
+?   	branchkv-core/internal/virtual_mem/delta	[no test files]
+?   	branchkv-core/internal/virtual_mem/deterministicreplay	[no test files]
+ok  	branchkv-core/internal/virtual_mem/distributedbranch	(cached)
+ok  	branchkv-core/internal/virtual_mem/distributedcoherence	(cached)
+?   	branchkv-core/internal/virtual_mem/distributedconsensus	[no test files]
+ok  	branchkv-core/internal/virtual_mem/distributeddag	(cached)
+ok  	branchkv-core/internal/virtual_mem/distributedepoch	(cached)
+ok  	branchkv-core/internal/virtual_mem/distributedfault	(cached)
+ok  	branchkv-core/internal/virtual_mem/distributedmerge	(cached)
+ok  	branchkv-core/internal/virtual_mem/distributedownership	(cached)
+ok  	branchkv-core/internal/virtual_mem/distributedpager	(cached)
+ok  	branchkv-core/internal/virtual_mem/distributedrecovery	(cached)
+ok  	branchkv-core/internal/virtual_mem/distributedreplay	(cached)
+ok  	branchkv-core/internal/virtual_mem/distributedscheduler	(cached)
+ok  	branchkv-core/internal/virtual_mem/distributedspec	(cached)
+?   	branchkv-core/internal/virtual_mem/epochclock	[no test files]
+?   	branchkv-core/internal/virtual_mem/epochgc	[no test files]
+?   	branchkv-core/internal/virtual_mem/epochreuse	[no test files]
+?   	branchkv-core/internal/virtual_mem/epochsync	[no test files]
+?   	branchkv-core/internal/virtual_mem/epochwalker	[no test files]
+?   	branchkv-core/internal/virtual_mem/eviction	[no test files]
+ok  	branchkv-core/internal/virtual_mem/faultcoalescer	(cached)
+ok  	branchkv-core/internal/virtual_mem/faultdispatcher	(cached)
+?   	branchkv-core/internal/virtual_mem/faultqueue	[no test files]
+ok  	branchkv-core/internal/virtual_mem/faultresolver	(cached)
+ok  	branchkv-core/internal/virtual_mem/fence	(cached)
+?   	branchkv-core/internal/virtual_mem/fixedchildren	[no test files]
+?   	branchkv-core/internal/virtual_mem/fixeddag	[no test files]
+ok  	branchkv-core/internal/virtual_mem/formalbranch	(cached)
+ok  	branchkv-core/internal/virtual_mem/formalchecker	(cached)
+ok  	branchkv-core/internal/virtual_mem/formalepoch	(cached)
+ok  	branchkv-core/internal/virtual_mem/formalgraph	(cached)
+?   	branchkv-core/internal/virtual_mem/formalinvariants	[no test files]
+ok  	branchkv-core/internal/virtual_mem/formalmodel	(cached)
+?   	branchkv-core/internal/virtual_mem/formalproof	[no test files]
+ok  	branchkv-core/internal/virtual_mem/formalreplay	(cached)
+ok  	branchkv-core/internal/virtual_mem/formalruntime	(cached)
+ok  	branchkv-core/internal/virtual_mem/formalstate	(cached)
+ok  	branchkv-core/internal/virtual_mem/formaltransition	(cached)
+?   	branchkv-core/internal/virtual_mem/framecache	[no test files]
+?   	branchkv-core/internal/virtual_mem/frameepoch	[no test files]
+?   	branchkv-core/internal/virtual_mem/freenodequeue	[no test files]
+?   	branchkv-core/internal/virtual_mem/freereuse	[no test files]
+?   	branchkv-core/internal/virtual_mem/generation	[no test files]
+?   	branchkv-core/internal/virtual_mem/hazard	[no test files]
+?   	branchkv-core/internal/virtual_mem/hazardset	[no test files]
+?   	branchkv-core/internal/virtual_mem/hugepage	[no test files]
+ok  	branchkv-core/internal/virtual_mem/hugepagecache	(cached)
+ok  	branchkv-core/internal/virtual_mem/hugepagedemotion	(cached)
+ok  	branchkv-core/internal/virtual_mem/hugepagepromoter	(cached)
+ok  	branchkv-core/internal/virtual_mem/hugepagewalker	(cached)
+?   	branchkv-core/internal/virtual_mem/invalidation	[no test files]
+ok  	branchkv-core/internal/virtual_mem/invariantchecker	(cached)
+ok  	branchkv-core/internal/virtual_mem/invariantgraph	(cached)
+ok  	branchkv-core/internal/virtual_mem/invariantvalidator	(cached)
+?   	branchkv-core/internal/virtual_mem/lineage	[no test files]
+ok  	branchkv-core/internal/virtual_mem/loadbuffer	(cached)
+?   	branchkv-core/internal/virtual_mem/lockfree	[no test files]
+ok  	branchkv-core/internal/virtual_mem/lockfreeepoch	(cached)
+ok  	branchkv-core/internal/virtual_mem/lockfreepagetable	(cached)
+ok  	branchkv-core/internal/virtual_mem/lockfreereclaimer	(cached)
+?   	branchkv-core/internal/virtual_mem/lockfreewalker	[no test files]
+?   	branchkv-core/internal/virtual_mem/membarrier	[no test files]
+ok  	branchkv-core/internal/virtual_mem/memorymodel	(cached)
+ok  	branchkv-core/internal/virtual_mem/memoryordering	(cached)
+?   	branchkv-core/internal/virtual_mem/mmu	[no test files]
+ok  	branchkv-core/internal/virtual_mem/mmucontext	(cached)
+ok  	branchkv-core/internal/virtual_mem/mmuswitch	(cached)
+ok  	branchkv-core/internal/virtual_mem/numaallocator	(cached)
+ok  	branchkv-core/internal/virtual_mem/numagraph	(cached)
+ok  	branchkv-core/internal/virtual_mem/numamigration	(cached)
+?   	branchkv-core/internal/virtual_mem/numaplacement	[no test files]
+ok  	branchkv-core/internal/virtual_mem/numapolicy	(cached)
+ok  	branchkv-core/internal/virtual_mem/numarebalance	(cached)
+?   	branchkv-core/internal/virtual_mem/ownership	[no test files]
+?   	branchkv-core/internal/virtual_mem/pagebarrier	[no test files]
+?   	branchkv-core/internal/virtual_mem/pagedir	[no test files]
+?   	branchkv-core/internal/virtual_mem/pageepoch	[no test files]
+ok  	branchkv-core/internal/virtual_mem/pagefaultqueue	(cached)
+?   	branchkv-core/internal/virtual_mem/pagegc	[no test files]
+?   	branchkv-core/internal/virtual_mem/pagelease	[no test files]
+?   	branchkv-core/internal/virtual_mem/pageownership	[no test files]
+?   	branchkv-core/internal/virtual_mem/pagepin	[no test files]
+?   	branchkv-core/internal/virtual_mem/pager	[no test files]
+?   	branchkv-core/internal/virtual_mem/pagetable/l1	[no test files]
+?   	branchkv-core/internal/virtual_mem/pagetable/l2	[no test files]
+?   	branchkv-core/internal/virtual_mem/pagetable_v2	[no test files]
+?   	branchkv-core/internal/virtual_mem/pagewalker	[no test files]
+?   	branchkv-core/internal/virtual_mem/parallelwalker	[no test files]
+?   	branchkv-core/internal/virtual_mem/pdpt	[no test files]
+?   	branchkv-core/internal/virtual_mem/pml4	[no test files]
+ok  	branchkv-core/internal/virtual_mem/prefetchwalker	(cached)
+ok  	branchkv-core/internal/virtual_mem/pressurebalancer	(cached)
+ok  	branchkv-core/internal/virtual_mem/pressureeviction	(cached)
+ok  	branchkv-core/internal/virtual_mem/pressurescanner	(cached)
+?   	branchkv-core/internal/virtual_mem/pte	[no test files]
+?   	branchkv-core/internal/virtual_mem/pteflags	[no test files]
+?   	branchkv-core/internal/virtual_mem/rcu	[no test files]
+?   	branchkv-core/internal/virtual_mem/readcopyupdate	[no test files]
+?   	branchkv-core/internal/virtual_mem/readmarkers	[no test files]
+?   	branchkv-core/internal/virtual_mem/readtracker	[no test files]
+ok  	branchkv-core/internal/virtual_mem/reclaimcoordinator	(cached)
+?   	branchkv-core/internal/virtual_mem/reclaimdag	[no test files]
+?   	branchkv-core/internal/virtual_mem/reclaimepoch	[no test files]
+?   	branchkv-core/internal/virtual_mem/reclaimer	[no test files]
+?   	branchkv-core/internal/virtual_mem/reclaimgraph	[no test files]
+ok  	branchkv-core/internal/virtual_mem/reclaimpipeline	(cached)
+?   	branchkv-core/internal/virtual_mem/reclaimqueue	[no test files]
+ok  	branchkv-core/internal/virtual_mem/reclaimscheduler	(cached)
+?   	branchkv-core/internal/virtual_mem/reclaimstats	[no test files]
+ok  	branchkv-core/internal/virtual_mem/reorderbuffer	(cached)
+ok  	branchkv-core/internal/virtual_mem/reorderqueue	(cached)
+ok  	branchkv-core/internal/virtual_mem/replaycheckpoint	(cached)
+ok  	branchkv-core/internal/virtual_mem/replaygraph	(cached)
+ok  	branchkv-core/internal/virtual_mem/replaylog	(cached)
+ok  	branchkv-core/internal/virtual_mem/replayvalidator	(cached)
+?   	branchkv-core/internal/virtual_mem/resident	[no test files]
+?   	branchkv-core/internal/virtual_mem/retireepoch	[no test files]
+?   	branchkv-core/internal/virtual_mem/retirelist	[no test files]
+?   	branchkv-core/internal/virtual_mem/retirequeue	[no test files]
+?   	branchkv-core/internal/virtual_mem/reusepool	[no test files]
+?   	branchkv-core/internal/virtual_mem/rollback	[no test files]
+?   	branchkv-core/internal/virtual_mem/rollbacklog	[no test files]
+ok  	branchkv-core/internal/virtual_mem/runtimeanalysis	(cached)
+ok  	branchkv-core/internal/virtual_mem/runtimecoherence	(cached)
+ok  	branchkv-core/internal/virtual_mem/runtimeconsistency	(cached)
+ok  	branchkv-core/internal/virtual_mem/runtimefaultgraph	(cached)
+ok  	branchkv-core/internal/virtual_mem/runtimeheatmap	(cached)
+ok  	branchkv-core/internal/virtual_mem/runtimeintrospection	(cached)
+?   	branchkv-core/internal/virtual_mem/runtimeobservability	[no test files]
+ok  	branchkv-core/internal/virtual_mem/runtimepressure	(cached)
+ok  	branchkv-core/internal/virtual_mem/runtimeprofiling	(cached)
+ok  	branchkv-core/internal/virtual_mem/runtimevalidation	(cached)
+?   	branchkv-core/internal/virtual_mem/snapshots	[no test files]
+?   	branchkv-core/internal/virtual_mem/snapshotspace	[no test files]
+?   	branchkv-core/internal/virtual_mem/specaging	[no test files]
+ok  	branchkv-core/internal/virtual_mem/specallocator	(cached)
+ok  	branchkv-core/internal/virtual_mem/specallocator_v2	(cached)
+ok  	branchkv-core/internal/virtual_mem/specallocator_v3	(cached)
+?   	branchkv-core/internal/virtual_mem/specarena	[no test files]
+?   	branchkv-core/internal/virtual_mem/specbarrier	[no test files]
+ok  	branchkv-core/internal/virtual_mem/specbarrier_v2	(cached)
+?   	branchkv-core/internal/virtual_mem/specbatch	[no test files]
+?   	branchkv-core/internal/virtual_mem/specbranch	[no test files]
+?   	branchkv-core/internal/virtual_mem/specbranchcache	[no test files]
+?   	branchkv-core/internal/virtual_mem/specbranchgraph	[no test files]
+ok  	branchkv-core/internal/virtual_mem/specbranchpredictor	(cached)
+?   	branchkv-core/internal/virtual_mem/specbridge	[no test files]
+?   	branchkv-core/internal/virtual_mem/specbuffer	[no test files]
+ok  	branchkv-core/internal/virtual_mem/speccache	(cached)
+?   	branchkv-core/internal/virtual_mem/specchain	[no test files]
+?   	branchkv-core/internal/virtual_mem/speccheckpoint	[no test files]
+ok  	branchkv-core/internal/virtual_mem/speccheckpointdelta	(cached)
+?   	branchkv-core/internal/virtual_mem/specclock	[no test files]
+?   	branchkv-core/internal/virtual_mem/speccommit	[no test files]
+ok  	branchkv-core/internal/virtual_mem/speccommit_v2	(cached)
+ok  	branchkv-core/internal/virtual_mem/speccommit_v3	(cached)
+?   	branchkv-core/internal/virtual_mem/speccommitgraph	[no test files]
+?   	branchkv-core/internal/virtual_mem/speccommitlog	[no test files]
+ok  	branchkv-core/internal/virtual_mem/speccommitqueue	(cached)
+ok  	branchkv-core/internal/virtual_mem/speccompactor	(cached)
+?   	branchkv-core/internal/virtual_mem/speccompression	[no test files]
+ok  	branchkv-core/internal/virtual_mem/specconsistency	(cached)
+?   	branchkv-core/internal/virtual_mem/speccoordinator	[no test files]
+ok  	branchkv-core/internal/virtual_mem/speccrash	(cached)
+?   	branchkv-core/internal/virtual_mem/speccursor	[no test files]
+?   	branchkv-core/internal/virtual_mem/specdag	[no test files]
+ok  	branchkv-core/internal/virtual_mem/specdag_v2	(cached)
+ok  	branchkv-core/internal/virtual_mem/specdag_v3	(cached)
+?   	branchkv-core/internal/virtual_mem/specdelta	[no test files]
+?   	branchkv-core/internal/virtual_mem/specdirty	[no test files]
+?   	branchkv-core/internal/virtual_mem/specdispatch	[no test files]
+?   	branchkv-core/internal/virtual_mem/specepoch	[no test files]
+ok  	branchkv-core/internal/virtual_mem/speceviction	(cached)
+?   	branchkv-core/internal/virtual_mem/specexecutor	[no test files]
+?   	branchkv-core/internal/virtual_mem/specfanout	[no test files]
+?   	branchkv-core/internal/virtual_mem/specfault	[no test files]
+?   	branchkv-core/internal/virtual_mem/specfork	[no test files]
+?   	branchkv-core/internal/virtual_mem/specframe	[no test files]
+ok  	branchkv-core/internal/virtual_mem/specframecache	(cached)
+?   	branchkv-core/internal/virtual_mem/specfrontier	[no test files]
+?   	branchkv-core/internal/virtual_mem/specfusion	[no test files]
+?   	branchkv-core/internal/virtual_mem/specgc	[no test files]
+?   	branchkv-core/internal/virtual_mem/specgc_v2	[no test files]
+ok  	branchkv-core/internal/virtual_mem/specgcgraph	(cached)
+?   	branchkv-core/internal/virtual_mem/specgeneration	[no test files]
+?   	branchkv-core/internal/virtual_mem/specgroup	[no test files]
+?   	branchkv-core/internal/virtual_mem/specheap	[no test files]
+ok  	branchkv-core/internal/virtual_mem/specheatmap	(cached)
+?   	branchkv-core/internal/virtual_mem/specindex	[no test files]
+ok  	branchkv-core/internal/virtual_mem/specintegrity	(cached)
+ok  	branchkv-core/internal/virtual_mem/specinvalidate	(cached)
+?   	branchkv-core/internal/virtual_mem/specjournal	[no test files]
+ok  	branchkv-core/internal/virtual_mem/specjournal_v2	(cached)
+?   	branchkv-core/internal/virtual_mem/speclease	[no test files]
+?   	branchkv-core/internal/virtual_mem/speclineage	[no test files]
+?   	branchkv-core/internal/virtual_mem/specmap	[no test files]
+ok  	branchkv-core/internal/virtual_mem/specmapping	(cached)
+?   	branchkv-core/internal/virtual_mem/specmemory	[no test files]
+?   	branchkv-core/internal/virtual_mem/specmerge	[no test files]
+?   	branchkv-core/internal/virtual_mem/specmetrics	[no test files]
+?   	branchkv-core/internal/virtual_mem/specmigration	[no test files]
+?   	branchkv-core/internal/virtual_mem/specnode	[no test files]
+?   	branchkv-core/internal/virtual_mem/specoptimizer	[no test files]
+?   	branchkv-core/internal/virtual_mem/specownership	[no test files]
+ok  	branchkv-core/internal/virtual_mem/specpagecache	(cached)
+ok  	branchkv-core/internal/virtual_mem/specpager	(cached)
+ok  	branchkv-core/internal/virtual_mem/specpager_v2	(cached)
+?   	branchkv-core/internal/virtual_mem/specpagetable	[no test files]
+?   	branchkv-core/internal/virtual_mem/specpersist	[no test files]
+?   	branchkv-core/internal/virtual_mem/specpipeline	[no test files]
+ok  	branchkv-core/internal/virtual_mem/specpipeline_v2	(cached)
+ok  	branchkv-core/internal/virtual_mem/specpipeline_v3	(cached)
+?   	branchkv-core/internal/virtual_mem/specplanner	[no test files]
+?   	branchkv-core/internal/virtual_mem/specpool	[no test files]
+ok  	branchkv-core/internal/virtual_mem/specprediction	(cached)
+ok  	branchkv-core/internal/virtual_mem/specprefetch	(cached)
+?   	branchkv-core/internal/virtual_mem/specqueue	[no test files]
+?   	branchkv-core/internal/virtual_mem/specreclaimer	[no test files]
+?   	branchkv-core/internal/virtual_mem/specrecovery	[no test files]
+ok  	branchkv-core/internal/virtual_mem/specrecovery_v2	(cached)
+?   	branchkv-core/internal/virtual_mem/specreorder	[no test files]
+ok  	branchkv-core/internal/virtual_mem/specreplay	(cached)
+?   	branchkv-core/internal/virtual_mem/specresident	[no test files]
+?   	branchkv-core/internal/virtual_mem/specresolver	[no test files]
+ok  	branchkv-core/internal/virtual_mem/specresolver_v2	(cached)
+ok  	branchkv-core/internal/virtual_mem/specresolver_v3	(cached)
+?   	branchkv-core/internal/virtual_mem/specrestore	[no test files]
+ok  	branchkv-core/internal/virtual_mem/specreuse	(cached)
+?   	branchkv-core/internal/virtual_mem/specrollback	[no test files]
+?   	branchkv-core/internal/virtual_mem/specrollback_v2	[no test files]
+ok  	branchkv-core/internal/virtual_mem/specrollbackgraph	(cached)
+ok  	branchkv-core/internal/virtual_mem/specrollbackqueue	(cached)
+?   	branchkv-core/internal/virtual_mem/specroot	[no test files]
+?   	branchkv-core/internal/virtual_mem/specrouter	[no test files]
+ok  	branchkv-core/internal/virtual_mem/specsampler	(cached)
+?   	branchkv-core/internal/virtual_mem/specscheduler	[no test files]
+ok  	branchkv-core/internal/virtual_mem/specscheduler_rt	(cached)
+?   	branchkv-core/internal/virtual_mem/specscheduler_v2	[no test files]
+?   	branchkv-core/internal/virtual_mem/specsequence	[no test files]
+?   	branchkv-core/internal/virtual_mem/specsnapshot	[no test files]
+ok  	branchkv-core/internal/virtual_mem/specsnapshotdelta	(cached)
+?   	branchkv-core/internal/virtual_mem/specstack	[no test files]
+?   	branchkv-core/internal/virtual_mem/specstate	[no test files]
+ok  	branchkv-core/internal/virtual_mem/specstats	(cached)
+ok  	branchkv-core/internal/virtual_mem/specstream	(cached)
+?   	branchkv-core/internal/virtual_mem/specsync	[no test files]
+ok  	branchkv-core/internal/virtual_mem/specsync_v2	(cached)
+ok  	branchkv-core/internal/virtual_mem/specsync_v3	(cached)
+ok  	branchkv-core/internal/virtual_mem/spectelemetry	(cached)
+?   	branchkv-core/internal/virtual_mem/spectimeline	[no test files]
+?   	branchkv-core/internal/virtual_mem/spectracker	[no test files]
+?   	branchkv-core/internal/virtual_mem/spectransaction	[no test files]
+?   	branchkv-core/internal/virtual_mem/speculativewalker	[no test files]
+ok  	branchkv-core/internal/virtual_mem/specvalidator	(cached)
+?   	branchkv-core/internal/virtual_mem/specversion	[no test files]
+ok  	branchkv-core/internal/virtual_mem/specwal	(cached)
+?   	branchkv-core/internal/virtual_mem/specwalk	[no test files]
+?   	branchkv-core/internal/virtual_mem/specwalker_v2	[no test files]
+ok  	branchkv-core/internal/virtual_mem/specwatchdog	(cached)
+?   	branchkv-core/internal/virtual_mem/specwindow	[no test files]
+?   	branchkv-core/internal/virtual_mem/storebuffer	[no test files]
+ok  	branchkv-core/internal/virtual_mem/stressallocator	(cached)
+?   	branchkv-core/internal/virtual_mem/stresscluster	[no test files]
+ok  	branchkv-core/internal/virtual_mem/stresscoherence	(cached)
+ok  	branchkv-core/internal/virtual_mem/stressfabric	(cached)
+ok  	branchkv-core/internal/virtual_mem/stressfault	(cached)
+ok  	branchkv-core/internal/virtual_mem/stressnode	(cached)
+ok  	branchkv-core/internal/virtual_mem/stresspressure	(cached)
+ok  	branchkv-core/internal/virtual_mem/stressrecovery	(cached)
+ok  	branchkv-core/internal/virtual_mem/stressruntime	(cached)
+ok  	branchkv-core/internal/virtual_mem/stressscheduler	(cached)
+?   	branchkv-core/internal/virtual_mem/swap	[no test files]
+ok  	branchkv-core/internal/virtual_mem/tests	(cached)
+?   	branchkv-core/internal/virtual_mem/tlb	[no test files]
+?   	branchkv-core/internal/virtual_mem/tlbepoch	[no test files]
+?   	branchkv-core/internal/virtual_mem/tlbinvalidate	[no test files]
+?   	branchkv-core/internal/virtual_mem/tlbshootdown	[no test files]
+?   	branchkv-core/internal/virtual_mem/translation	[no test files]
+?   	branchkv-core/internal/virtual_mem/translationcache	[no test files]
+?   	branchkv-core/internal/virtual_mem/versionvector	[no test files]
+ok  	branchkv-core/internal/virtual_mem/vma	(cached)
+ok  	branchkv-core/internal/virtual_mem/vmabranch	(cached)
+ok  	branchkv-core/internal/virtual_mem/vmaguard	(cached)
+ok  	branchkv-core/internal/virtual_mem/vmamerge	(cached)
+ok  	branchkv-core/internal/virtual_mem/vmaprotection	(cached)
+ok  	branchkv-core/internal/virtual_mem/vmaregion	(cached)
+ok  	branchkv-core/internal/virtual_mem/vmasplit	(cached)
+?   	branchkv-core/internal/virtual_mem/walker	[no test files]
+?   	branchkv-core/internal/virtual_mem/walkerfast	[no test files]
+?   	branchkv-core/internal/virtual_mem/walkerprefetch	[no test files]
+ok  	branchkv-core/internal/virtual_mem/writecombine	(cached)
+?   	branchkv-core/internal/virtualfs	[no test files]
+?   	branchkv-core/internal/wal	[no test files]
+ok  	branchkv-core/internal/wal/tests	0.014s
+?   	branchkv-core/internal/walreplication	[no test files]
+?   	branchkv-core/internal/workerpool	[no test files]
+ok  	branchkv-core/internal/workerpool/tests	(cached)
+?   	branchkv-core/internal/workloadmodel	[no test files]
+?   	branchkv-core/internal/workstealing	[no test files]
+ok  	branchkv-core/internal/workstealing/tests	(cached)
+?   	branchkv-core/internal/writebatch	[no test files]
+?   	branchkv-core/internal/writebuffer	[no test files]
+?   	branchkv-core/internal/zerocopy	[no test files]
