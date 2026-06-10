@@ -1,0 +1,16 @@
+goos: linux
+goarch: amd64
+pkg: branchkv-core/internal/experiments/snapshot_scaling
+cpu: AMD EPYC 7763 64-Core Processor                
+BenchmarkSnapshotScaling-4   	1000000000	         0.3284 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSnapshotScaling-4   	1000000000	         0.3638 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSnapshotScaling-4   	1000000000	         0.3153 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSnapshotScaling-4   	1000000000	         0.3174 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSnapshotScaling-4   	1000000000	         0.3295 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSnapshotScaling-4   	1000000000	         0.3234 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSnapshotScaling-4   	1000000000	         0.3307 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSnapshotScaling-4   	1000000000	         0.3236 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSnapshotScaling-4   	1000000000	         0.3157 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSnapshotScaling-4   	1000000000	         0.3209 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	branchkv-core/internal/experiments/snapshot_scaling	3.622s

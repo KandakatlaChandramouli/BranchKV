@@ -1,0 +1,16 @@
+goos: linux
+goarch: amd64
+pkg: branchkv-core/internal/experiments/numa_scaling
+cpu: AMD EPYC 7763 64-Core Processor                
+BenchmarkNUMAScaling-4   	1000000000	         0.3171 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNUMAScaling-4   	1000000000	         0.3170 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNUMAScaling-4   	1000000000	         0.3231 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNUMAScaling-4   	1000000000	         0.3364 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNUMAScaling-4   	1000000000	         0.3160 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNUMAScaling-4   	1000000000	         0.3202 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNUMAScaling-4   	1000000000	         0.3388 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNUMAScaling-4   	1000000000	         0.3191 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNUMAScaling-4   	1000000000	         0.3191 ns/op	       0 B/op	       0 allocs/op
+BenchmarkNUMAScaling-4   	1000000000	         0.3259 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	branchkv-core/internal/experiments/numa_scaling	3.603s

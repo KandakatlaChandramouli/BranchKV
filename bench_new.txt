@@ -1,0 +1,66 @@
+goos: linux
+goarch: amd64
+pkg: branchkv-core/internal/virtual_mem/benchmarks
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkArenaDAG-4   	22649433	        48.40 ns/op	      45 B/op	       0 allocs/op
+BenchmarkArenaDAG-4   	37975419	        60.98 ns/op	      42 B/op	       0 allocs/op
+BenchmarkArenaDAG-4   	35373608	        30.75 ns/op	      45 B/op	       0 allocs/op
+BenchmarkArenaDAG-4   	37877474	        31.33 ns/op	      42 B/op	       0 allocs/op
+BenchmarkArenaDAG-4   	33776301	        32.49 ns/op	      47 B/op	       0 allocs/op
+BenchmarkArenaDAG-4   	33100550	        38.31 ns/op	      48 B/op	       0 allocs/op
+BenchmarkArenaDAG-4   	36594664	        31.12 ns/op	      44 B/op	       0 allocs/op
+BenchmarkArenaDAG-4   	35808474	        32.41 ns/op	      45 B/op	       0 allocs/op
+BenchmarkArenaDAG-4   	41621798	        58.88 ns/op	      48 B/op	       0 allocs/op
+BenchmarkArenaDAG-4   	43448062	        37.48 ns/op	      46 B/op	       0 allocs/op
+BenchmarkArenaDAG-4   	35852542	        31.55 ns/op	      45 B/op	       0 allocs/op
+BenchmarkArenaDAG-4   	39584580	        28.28 ns/op	      40 B/op	       0 allocs/op
+BenchmarkArenaDAG-4   	36683262	        30.55 ns/op	      44 B/op	       0 allocs/op
+BenchmarkArenaDAG-4   	38844877	        65.08 ns/op	      41 B/op	       0 allocs/op
+BenchmarkArenaDAG-4   	32727424	        31.51 ns/op	      49 B/op	       0 allocs/op
+BenchmarkArenaDAG-4   	35944497	        32.45 ns/op	      44 B/op	       0 allocs/op
+BenchmarkArenaDAG-4   	36278536	        37.05 ns/op	      44 B/op	       0 allocs/op
+BenchmarkArenaDAG-4   	36336560	        31.06 ns/op	      44 B/op	       0 allocs/op
+BenchmarkArenaDAG-4   	32524162	        32.91 ns/op	      49 B/op	       0 allocs/op
+BenchmarkArenaDAG-4   	37055896	        32.59 ns/op	      43 B/op	       0 allocs/op
+BenchmarkFixedDAG-4   	 7263902	       196.9 ns/op	     791 B/op	       0 allocs/op
+BenchmarkFixedDAG-4   	 6111778	       209.2 ns/op	     792 B/op	       0 allocs/op
+BenchmarkFixedDAG-4   	 5390940	       253.7 ns/op	     792 B/op	       0 allocs/op
+BenchmarkFixedDAG-4   	 5482592	       269.7 ns/op	     791 B/op	       0 allocs/op
+BenchmarkFixedDAG-4   	 5151753	       238.0 ns/op	     791 B/op	       0 allocs/op
+BenchmarkFixedDAG-4   	 3935544	       293.4 ns/op	     792 B/op	       0 allocs/op
+BenchmarkFixedDAG-4   	 7657670	       247.0 ns/op	     792 B/op	       0 allocs/op
+BenchmarkFixedDAG-4   	 7373928	       207.1 ns/op	     791 B/op	       0 allocs/op
+BenchmarkFixedDAG-4   	 5720700	       270.4 ns/op	     791 B/op	       0 allocs/op
+BenchmarkFixedDAG-4   	 5553236	       258.7 ns/op	     791 B/op	       0 allocs/op
+BenchmarkFixedDAG-4   	 4340488	       239.2 ns/op	     791 B/op	       0 allocs/op
+BenchmarkFixedDAG-4   	 8054899	       242.9 ns/op	     791 B/op	       0 allocs/op
+BenchmarkFixedDAG-4   	 4192734	       268.6 ns/op	     791 B/op	       0 allocs/op
+BenchmarkFixedDAG-4   	 6141114	       233.8 ns/op	     791 B/op	       0 allocs/op
+BenchmarkFixedDAG-4   	 4942374	       226.1 ns/op	     791 B/op	       0 allocs/op
+BenchmarkFixedDAG-4   	 6502606	       245.6 ns/op	     792 B/op	       0 allocs/op
+BenchmarkFixedDAG-4   	 3808071	       274.2 ns/op	     790 B/op	       0 allocs/op
+BenchmarkFixedDAG-4   	 7901227	       229.2 ns/op	     792 B/op	       0 allocs/op
+BenchmarkFixedDAG-4   	 4939234	       275.3 ns/op	     791 B/op	       0 allocs/op
+BenchmarkFixedDAG-4   	 4919720	       230.1 ns/op	     791 B/op	       0 allocs/op
+BenchmarkSpecDAG-4    	 9152510	       139.0 ns/op	      94 B/op	       1 allocs/op
+BenchmarkSpecDAG-4    	12484923	       137.1 ns/op	      90 B/op	       1 allocs/op
+BenchmarkSpecDAG-4    	12478924	       103.3 ns/op	      90 B/op	       1 allocs/op
+BenchmarkSpecDAG-4    	 8452436	       141.2 ns/op	      88 B/op	       1 allocs/op
+BenchmarkSpecDAG-4    	13491955	       139.8 ns/op	      97 B/op	       1 allocs/op
+BenchmarkSpecDAG-4    	 8937438	       113.3 ns/op	      95 B/op	       1 allocs/op
+BenchmarkSpecDAG-4    	11501754	       161.7 ns/op	      94 B/op	       1 allocs/op
+BenchmarkSpecDAG-4    	 9512878	       137.4 ns/op	      92 B/op	       1 allocs/op
+BenchmarkSpecDAG-4    	14784734	        81.79 ns/op	      92 B/op	       1 allocs/op
+BenchmarkSpecDAG-4    	13129449	       113.6 ns/op	      88 B/op	       1 allocs/op
+BenchmarkSpecDAG-4    	13183621	        78.57 ns/op	      88 B/op	       1 allocs/op
+BenchmarkSpecDAG-4    	11803603	       120.6 ns/op	      92 B/op	       1 allocs/op
+BenchmarkSpecDAG-4    	 9812710	       114.1 ns/op	      91 B/op	       1 allocs/op
+BenchmarkSpecDAG-4    	 9040346	       127.0 ns/op	      94 B/op	       1 allocs/op
+BenchmarkSpecDAG-4    	11073471	       106.6 ns/op	      95 B/op	       1 allocs/op
+BenchmarkSpecDAG-4    	15970681	        94.11 ns/op	      89 B/op	       1 allocs/op
+BenchmarkSpecDAG-4    	11895133	        90.84 ns/op	      92 B/op	       1 allocs/op
+BenchmarkSpecDAG-4    	11149195	       122.4 ns/op	      95 B/op	       1 allocs/op
+BenchmarkSpecDAG-4    	14767731	       101.6 ns/op	      92 B/op	       1 allocs/op
+BenchmarkSpecDAG-4    	 9673617	       116.1 ns/op	      91 B/op	       1 allocs/op
+PASS
+ok  	branchkv-core/internal/virtual_mem/benchmarks	124.035s

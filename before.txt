@@ -1,0 +1,16 @@
+goos: linux
+goarch: amd64
+pkg: branchkv-core/internal/virtual_mem/benchmarks
+cpu: AMD EPYC 7763 64-Core Processor                
+BenchmarkArenaAllocate-4   	58768036	        18.08 ns/op	       0 B/op	       0 allocs/op
+BenchmarkCopyOnWrite-4     	91173840	        11.82 ns/op	       0 B/op	       0 allocs/op
+BenchmarkCoWFault-4        	448732401	         2.326 ns/op	       0 B/op	       0 allocs/op
+BenchmarkArenaDAG-4        	25032513	        42.68 ns/op	      41 B/op	       0 allocs/op
+BenchmarkEpochAdvance-4    	493927419	         2.423 ns/op	       0 B/op	       0 allocs/op
+BenchmarkFixedDAG-4        	 2953381	       340.4 ns/op	     790 B/op	       0 allocs/op
+BenchmarkPageFault-4       	75210924	        15.96 ns/op	       0 B/op	       0 allocs/op
+BenchmarkPageWalker-4      	110844992	         9.939 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSpecDAG-4         	 7899904	       188.7 ns/op	      90 B/op	       1 allocs/op
+BenchmarkSpecWalker-4      	1000000000	         0.6514 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	branchkv-core/internal/virtual_mem/benchmarks	14.365s

@@ -1,0 +1,11 @@
+benchmark,ns_op,bytes_op,allocs_op
+ArenaAllocate,17.97,0,0
+CopyOnWrite,11.72,0,0
+CoWFault,2.279,0,0
+ArenaDAG,59.49,44,0
+EpochAdvance,2.412,0,0
+FixedDAG,191.2,792,0
+PageFault,16.50,0,0
+PageWalker,10.19,0,0
+SpecDAG,194.2,93,1
+SpecWalker,0.73,0,0

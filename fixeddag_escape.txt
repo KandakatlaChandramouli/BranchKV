@@ -1,0 +1,23 @@
+# branchkv-core/internal/virtual_mem/fixeddag
+internal/virtual_mem/fixeddag/dag.go:15:6: can inline Link with cost 26 as: func(*Node, *Node) { if parent.Count >= uint8(8) { return  }; index := parent.Count; parent.Children[index] = child; parent.Count++; child.Parent = parent }
+internal/virtual_mem/fixeddag/fixeddag.go:9:6: can inline NewRuntime with cost 3 as: func() *Runtime { return &Runtime{} }
+internal/virtual_mem/fixeddag/fixeddag.go:14:6: can inline (*Runtime).Next with cost 9 as: method(*Runtime) func() uint64 { return (*atomic.Uint64).Add(r.value, uint64(1)) }
+internal/virtual_mem/fixeddag/fixeddag.go:19:6: can inline (*Runtime).Load with cost 7 as: method(*Runtime) func() uint64 { return (*atomic.Uint64).Load(r.value) }
+internal/virtual_mem/fixeddag/fixeddag.go:16:20: inlining call to atomic.(*Uint64).Add
+internal/virtual_mem/fixeddag/fixeddag.go:21:21: inlining call to atomic.(*Uint64).Load
+internal/virtual_mem/fixeddag/dag.go:17:2: parameter child leaks to {heap} for Link with derefs=0:
+internal/virtual_mem/fixeddag/dag.go:17:2:   flow: {heap} ← child:
+internal/virtual_mem/fixeddag/dag.go:17:2:     from parent.Children[index] = child (assign) at internal/virtual_mem/fixeddag/dag.go:26:25
+internal/virtual_mem/fixeddag/dag.go:16:2: parameter parent leaks to {heap} for Link with derefs=0:
+internal/virtual_mem/fixeddag/dag.go:16:2:   flow: {heap} ← parent:
+internal/virtual_mem/fixeddag/dag.go:16:2:     from child.Parent = parent (assign) at internal/virtual_mem/fixeddag/dag.go:30:15
+internal/virtual_mem/fixeddag/dag.go:16:2: leaking param: parent
+internal/virtual_mem/fixeddag/dag.go:17:2: leaking param: child
+internal/virtual_mem/fixeddag/fixeddag.go:11:9: &Runtime{} escapes to heap in NewRuntime:
+internal/virtual_mem/fixeddag/fixeddag.go:11:9:   flow: ~r0 ← &{storage for &Runtime{}}:
+internal/virtual_mem/fixeddag/fixeddag.go:11:9:     from &Runtime{} (spill) at internal/virtual_mem/fixeddag/fixeddag.go:11:9
+internal/virtual_mem/fixeddag/fixeddag.go:11:9:     from return &Runtime{} (return) at internal/virtual_mem/fixeddag/fixeddag.go:11:2
+internal/virtual_mem/fixeddag/fixeddag.go:11:9: &Runtime{} escapes to heap
+internal/virtual_mem/fixeddag/fixeddag.go:14:7: r does not escape
+internal/virtual_mem/fixeddag/fixeddag.go:19:7: r does not escape
+?   	branchkv-core/internal/virtual_mem/fixeddag	[no test files]

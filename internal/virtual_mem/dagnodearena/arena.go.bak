@@ -3,8 +3,7 @@ package dagnodearena
 type Node struct {
 	ID       uint64
 	Parent   *Node
-	Children [8]*Node
-    Count uint8
+	Children []*Node
 }
 
 type Arena struct {

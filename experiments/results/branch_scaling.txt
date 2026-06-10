@@ -1,0 +1,16 @@
+goos: linux
+goarch: amd64
+pkg: branchkv-core/internal/experiments/branch_scaling
+cpu: AMD EPYC 7763 64-Core Processor                
+BenchmarkBranchScaling-4   	1000000000	         0.3546 ns/op	       0 B/op	       0 allocs/op
+BenchmarkBranchScaling-4   	1000000000	         0.3396 ns/op	       0 B/op	       0 allocs/op
+BenchmarkBranchScaling-4   	1000000000	         0.3155 ns/op	       0 B/op	       0 allocs/op
+BenchmarkBranchScaling-4   	1000000000	         0.3205 ns/op	       0 B/op	       0 allocs/op
+BenchmarkBranchScaling-4   	1000000000	         0.3282 ns/op	       0 B/op	       0 allocs/op
+BenchmarkBranchScaling-4   	1000000000	         0.3172 ns/op	       0 B/op	       0 allocs/op
+BenchmarkBranchScaling-4   	1000000000	         0.3335 ns/op	       0 B/op	       0 allocs/op
+BenchmarkBranchScaling-4   	1000000000	         0.3445 ns/op	       0 B/op	       0 allocs/op
+BenchmarkBranchScaling-4   	1000000000	         0.3186 ns/op	       0 B/op	       0 allocs/op
+BenchmarkBranchScaling-4   	1000000000	         0.3242 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	branchkv-core/internal/experiments/branch_scaling	3.649s

@@ -1,0 +1,16 @@
+goos: linux
+goarch: amd64
+pkg: branchkv-core/internal/experiments/rollback_scaling
+cpu: AMD EPYC 7763 64-Core Processor                
+BenchmarkRollbackScaling-4   	1000000000	         0.3235 ns/op	       0 B/op	       0 allocs/op
+BenchmarkRollbackScaling-4   	1000000000	         0.3192 ns/op	       0 B/op	       0 allocs/op
+BenchmarkRollbackScaling-4   	1000000000	         0.3296 ns/op	       0 B/op	       0 allocs/op
+BenchmarkRollbackScaling-4   	1000000000	         0.3184 ns/op	       0 B/op	       0 allocs/op
+BenchmarkRollbackScaling-4   	1000000000	         0.3207 ns/op	       0 B/op	       0 allocs/op
+BenchmarkRollbackScaling-4   	1000000000	         0.3204 ns/op	       0 B/op	       0 allocs/op
+BenchmarkRollbackScaling-4   	1000000000	         0.3443 ns/op	       0 B/op	       0 allocs/op
+BenchmarkRollbackScaling-4   	1000000000	         0.3513 ns/op	       0 B/op	       0 allocs/op
+BenchmarkRollbackScaling-4   	1000000000	         0.3234 ns/op	       0 B/op	       0 allocs/op
+BenchmarkRollbackScaling-4   	1000000000	         0.3193 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	branchkv-core/internal/experiments/rollback_scaling	3.662s

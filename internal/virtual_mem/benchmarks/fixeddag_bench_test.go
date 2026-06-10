@@ -10,12 +10,10 @@ func BenchmarkFixedDAG(
 	b *testing.B,
 ) {
 
-	total := uint64(
-		(b.N * (fixeddag.MaxChildren + 1)) + 1,
-	)
+	const arenaSize = 100000
 
 	arena := specarena.NewArena(
-		total,
+		arenaSize,
 	)
 
 	b.ResetTimer()
@@ -24,9 +22,25 @@ func BenchmarkFixedDAG(
 
 		root := arena.Allocate()
 
+		if root == nil {
+			arena = specarena.NewArena(
+				arenaSize,
+			)
+			root = arena.Allocate()
+		}
+
 		for j := 0; j < fixeddag.MaxChildren; j++ {
 
 			child := arena.Allocate()
+
+			if child == nil {
+
+				arena = specarena.NewArena(
+					arenaSize,
+				)
+
+				child = arena.Allocate()
+			}
 
 			fixeddag.Link(
 				root,

@@ -1,0 +1,22 @@
+# branchkv-core/internal/virtual_mem/specdag
+internal/virtual_mem/specdag/specdag.go:9:6: can inline NewNode with cost 5 as: func(uint64) *Node { return &Node{...} }
+internal/virtual_mem/specdag/specdag.go:18:6: can inline Link with cost 11 as: func(*Node, *Node) { child.Parent = parent; parent.Children = append(parent.Children, child) }
+internal/virtual_mem/specdag/specdag.go:13:9: &Node{...} escapes to heap in NewNode:
+internal/virtual_mem/specdag/specdag.go:13:9:   flow: ~r0 ← &{storage for &Node{...}}:
+internal/virtual_mem/specdag/specdag.go:13:9:     from &Node{...} (spill) at internal/virtual_mem/specdag/specdag.go:13:9
+internal/virtual_mem/specdag/specdag.go:13:9:     from return &Node{...} (return) at internal/virtual_mem/specdag/specdag.go:13:2
+internal/virtual_mem/specdag/specdag.go:13:9: &Node{...} escapes to heap
+internal/virtual_mem/specdag/specdag.go:25:26: append(parent.Children, child) escapes to heap in Link:
+internal/virtual_mem/specdag/specdag.go:25:26:   flow: {heap} ← &{storage for append(parent.Children, child)}:
+internal/virtual_mem/specdag/specdag.go:25:26:     from append(parent.Children, child) (spill) at internal/virtual_mem/specdag/specdag.go:25:26
+internal/virtual_mem/specdag/specdag.go:25:26:     from parent.Children = append(parent.Children, child) (assign) at internal/virtual_mem/specdag/specdag.go:25:18
+internal/virtual_mem/specdag/specdag.go:19:2: parameter parent leaks to {heap} for Link with derefs=0:
+internal/virtual_mem/specdag/specdag.go:19:2:   flow: {heap} ← parent:
+internal/virtual_mem/specdag/specdag.go:19:2:     from child.Parent = parent (assign) at internal/virtual_mem/specdag/specdag.go:23:15
+internal/virtual_mem/specdag/specdag.go:20:2: parameter child leaks to {heap} for Link with derefs=0:
+internal/virtual_mem/specdag/specdag.go:20:2:   flow: {heap} ← child:
+internal/virtual_mem/specdag/specdag.go:20:2:     from append(parent.Children, child) (call parameter) at internal/virtual_mem/specdag/specdag.go:25:26
+internal/virtual_mem/specdag/specdag.go:19:2: leaking param: parent
+internal/virtual_mem/specdag/specdag.go:20:2: leaking param: child
+internal/virtual_mem/specdag/specdag.go:25:26: append escapes to heap
+?   	branchkv-core/internal/virtual_mem/specdag	[no test files]

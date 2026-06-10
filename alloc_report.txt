@@ -1,0 +1,471 @@
+# branchkv-core/internal/virtual_mem/benchmarks [branchkv-core/internal/virtual_mem/benchmarks.test]
+internal/virtual_mem/benchmarks/arena_bench_test.go:8:6: cannot inline BenchmarkArenaAllocate: function too complex: cost 329 exceeds budget 80
+internal/virtual_mem/benchmarks/cow_bench_test.go:9:6: cannot inline BenchmarkCopyOnWrite: function too complex: cost 434 exceeds budget 80
+internal/virtual_mem/benchmarks/cowfault_bench_test.go:9:6: cannot inline BenchmarkCoWFault: function too complex: cost 190 exceeds budget 80
+internal/virtual_mem/benchmarks/dagarena_bench_test.go:9:6: cannot inline BenchmarkArenaDAG: function too complex: cost 148 exceeds budget 80
+internal/virtual_mem/benchmarks/epochgc_bench_test.go:8:6: cannot inline BenchmarkEpochAdvance: function too complex: cost 92 exceeds budget 80
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:9:6: cannot inline BenchmarkFixedDAG: function too complex: cost 279 exceeds budget 80
+internal/virtual_mem/benchmarks/pager_bench_test.go:11:6: cannot inline BenchmarkPageFault: function too complex: cost 299 exceeds budget 80
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:11:6: cannot inline BenchmarkPageWalker: function too complex: cost 348 exceeds budget 80
+internal/virtual_mem/benchmarks/specdag_bench_test.go:8:6: cannot inline BenchmarkSpecDAG: function too complex: cost 112 exceeds budget 80
+internal/virtual_mem/benchmarks/specwalk_bench_test.go:11:6: cannot inline BenchmarkSpecWalker: function too complex: cost 145 exceeds budget 80
+internal/virtual_mem/benchmarks/cow_bench_test.go:13:44: inlining call to virtual_mem.NewFrameAllocator
+internal/virtual_mem/benchmarks/cow_bench_test.go:18:35: inlining call to virtual_mem.NewPageTable
+internal/virtual_mem/benchmarks/cow_bench_test.go:20:29: inlining call to virtual_mem.(*FrameAllocator).Alloc
+internal/virtual_mem/benchmarks/cow_bench_test.go:27:30: inlining call to cow.NewCopyOnWrite
+internal/virtual_mem/benchmarks/cowfault_bench_test.go:13:39: inlining call to virtual_mem.NewPhysicalFrame
+internal/virtual_mem/benchmarks/cowfault_bench_test.go:18:22: inlining call to atomic.(*Int64).Store
+internal/virtual_mem/benchmarks/cowfault_bench_test.go:13:39: inlining call to atomic.(*Int64).Store
+internal/virtual_mem/benchmarks/cowfault_bench_test.go:13:39: inlining call to atomic.(*Bool).Store
+internal/virtual_mem/benchmarks/cowfault_bench_test.go:13:39: inlining call to atomic.b32
+internal/virtual_mem/benchmarks/dagarena_bench_test.go:13:32: inlining call to dagnodearena.NewArena
+internal/virtual_mem/benchmarks/dagarena_bench_test.go:19:24: inlining call to dagnodearena.(*Arena).Allocate
+internal/virtual_mem/benchmarks/dagarena_bench_test.go:25:26: inlining call to dagnodearena.(*Arena).Allocate
+internal/virtual_mem/benchmarks/dagarena_bench_test.go:27:23: inlining call to specbranchgraph.Link
+internal/virtual_mem/benchmarks/epochgc_bench_test.go:12:28: inlining call to epochgc.NewCollector
+internal/virtual_mem/benchmarks/epochgc_bench_test.go:18:13: inlining call to epochgc.(*Collector).Advance
+internal/virtual_mem/benchmarks/epochgc_bench_test.go:18:13: inlining call to atomic.(*Uint64).Add
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:15:29: inlining call to specarena.NewArena
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:23:25: inlining call to specarena.(*Arena).Allocate
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:26:30: inlining call to specarena.NewArena
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:29:25: inlining call to specarena.(*Arena).Allocate
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:34:27: inlining call to specarena.(*Arena).Allocate
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:38:31: inlining call to specarena.NewArena
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:42:27: inlining call to specarena.(*Arena).Allocate
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:45:17: inlining call to fixeddag.Link
+internal/virtual_mem/benchmarks/pager_bench_test.go:15:28: inlining call to swap.NewManager
+internal/virtual_mem/benchmarks/pager_bench_test.go:17:32: inlining call to eviction.NewEvictor
+internal/virtual_mem/benchmarks/pager_bench_test.go:21:21: inlining call to pager.NewPager
+internal/virtual_mem/benchmarks/pager_bench_test.go:25:39: inlining call to virtual_mem.NewPhysicalFrame
+internal/virtual_mem/benchmarks/pager_bench_test.go:30:17: inlining call to virtual_mem.(*PhysicalFrame).MarkDirty
+internal/virtual_mem/benchmarks/pager_bench_test.go:40:10: inlining call to pager.(*Pager).Fault
+internal/virtual_mem/benchmarks/pager_bench_test.go:25:39: inlining call to atomic.(*Int64).Store
+internal/virtual_mem/benchmarks/pager_bench_test.go:25:39: inlining call to atomic.(*Bool).Store
+internal/virtual_mem/benchmarks/pager_bench_test.go:30:17: inlining call to atomic.(*Bool).Store
+internal/virtual_mem/benchmarks/pager_bench_test.go:25:39: inlining call to atomic.b32
+internal/virtual_mem/benchmarks/pager_bench_test.go:30:17: inlining call to atomic.b32
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:15:21: inlining call to l1.NewTable
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:17:23: inlining call to tlb.NewCache
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:19:32: inlining call to pagewalker.NewWalker
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:28:39: inlining call to virtual_mem.NewPhysicalFrame
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:28:39: inlining call to atomic.(*Int64).Store
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:28:39: inlining call to atomic.(*Bool).Store
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:28:39: inlining call to atomic.b32
+internal/virtual_mem/benchmarks/specdag_bench_test.go:12:25: inlining call to specdag.NewNode
+internal/virtual_mem/benchmarks/specdag_bench_test.go:20:27: inlining call to specdag.NewNode
+internal/virtual_mem/benchmarks/specdag_bench_test.go:24:15: inlining call to specdag.Link
+internal/virtual_mem/benchmarks/specwalk_bench_test.go:15:21: inlining call to l1.NewTable
+internal/virtual_mem/benchmarks/specwalk_bench_test.go:17:33: inlining call to snapshotspace.NewSpace
+internal/virtual_mem/benchmarks/specwalk_bench_test.go:22:23: inlining call to tlb.NewCache
+internal/virtual_mem/benchmarks/specwalk_bench_test.go:24:30: inlining call to specwalk.NewWalker
+internal/virtual_mem/benchmarks/specwalk_bench_test.go:33:19: inlining call to specwalk.(*Walker).Inner
+internal/virtual_mem/benchmarks/specwalk_bench_test.go:33:19: inlining call to pagewalker.NewWalker
+internal/virtual_mem/benchmarks/arena_bench_test.go:9:2: parameter b leaks to {heap} for BenchmarkArenaAllocate with derefs=0:
+internal/virtual_mem/benchmarks/arena_bench_test.go:9:2:   flow: {heap} ← b:
+internal/virtual_mem/benchmarks/arena_bench_test.go:9:2:     from b.common (dot of pointer) at internal/virtual_mem/benchmarks/arena_bench_test.go:24:5
+internal/virtual_mem/benchmarks/arena_bench_test.go:9:2:     from b.common (address-of) at internal/virtual_mem/benchmarks/arena_bench_test.go:24:5
+internal/virtual_mem/benchmarks/arena_bench_test.go:9:2:     from (*testing.common).Fatal(b.common, ... argument...) (call parameter) at internal/virtual_mem/benchmarks/arena_bench_test.go:24:11
+internal/virtual_mem/benchmarks/arena_bench_test.go:24:12: "allocation failed" escapes to heap in BenchmarkArenaAllocate:
+internal/virtual_mem/benchmarks/arena_bench_test.go:24:12:   flow: {storage for ... argument} ← &{storage for "allocation failed"}:
+internal/virtual_mem/benchmarks/arena_bench_test.go:24:12:     from "allocation failed" (spill) at internal/virtual_mem/benchmarks/arena_bench_test.go:24:12
+internal/virtual_mem/benchmarks/arena_bench_test.go:24:12:     from ... argument (slice-literal-element) at internal/virtual_mem/benchmarks/arena_bench_test.go:24:11
+internal/virtual_mem/benchmarks/arena_bench_test.go:24:12:   flow: {heap} ← {storage for ... argument}:
+internal/virtual_mem/benchmarks/arena_bench_test.go:24:12:     from ... argument (spill) at internal/virtual_mem/benchmarks/arena_bench_test.go:24:11
+internal/virtual_mem/benchmarks/arena_bench_test.go:24:12:     from (*testing.common).Fatal(b.common, ... argument...) (call parameter) at internal/virtual_mem/benchmarks/arena_bench_test.go:24:11
+internal/virtual_mem/benchmarks/arena_bench_test.go:9:2: leaking param: b
+internal/virtual_mem/benchmarks/arena_bench_test.go:24:11: ... argument does not escape
+internal/virtual_mem/benchmarks/arena_bench_test.go:24:12: "allocation failed" escapes to heap
+internal/virtual_mem/benchmarks/cow_bench_test.go:18:35: &virtual_mem.PageTable{...} escapes to heap in BenchmarkCopyOnWrite:
+internal/virtual_mem/benchmarks/cow_bench_test.go:18:35:   flow: ~r0 ← &{storage for &virtual_mem.PageTable{...}}:
+internal/virtual_mem/benchmarks/cow_bench_test.go:18:35:     from &virtual_mem.PageTable{...} (spill) at internal/virtual_mem/benchmarks/cow_bench_test.go:18:35
+internal/virtual_mem/benchmarks/cow_bench_test.go:18:35:     from ~r0 = &virtual_mem.PageTable{...} (assign-pair) at internal/virtual_mem/benchmarks/cow_bench_test.go:18:35
+internal/virtual_mem/benchmarks/cow_bench_test.go:18:35:   flow: table ← ~r0:
+internal/virtual_mem/benchmarks/cow_bench_test.go:18:35:     from table := ~r0 (assign) at internal/virtual_mem/benchmarks/cow_bench_test.go:18:8
+internal/virtual_mem/benchmarks/cow_bench_test.go:18:35:   flow: {heap} ← table:
+internal/virtual_mem/benchmarks/cow_bench_test.go:18:35:     from (*virtual_mem.PageTable).Map(table, uint64(1), frame) (call parameter) at internal/virtual_mem/benchmarks/cow_bench_test.go:22:11
+internal/virtual_mem/benchmarks/cow_bench_test.go:13:44: &virtual_mem.FrameAllocator{...} escapes to heap in BenchmarkCopyOnWrite:
+internal/virtual_mem/benchmarks/cow_bench_test.go:13:44:   flow: ~r0 ← &{storage for &virtual_mem.FrameAllocator{...}}:
+internal/virtual_mem/benchmarks/cow_bench_test.go:13:44:     from &virtual_mem.FrameAllocator{...} (spill) at internal/virtual_mem/benchmarks/cow_bench_test.go:13:44
+internal/virtual_mem/benchmarks/cow_bench_test.go:13:44:     from ~r0 = &virtual_mem.FrameAllocator{...} (assign-pair) at internal/virtual_mem/benchmarks/cow_bench_test.go:13:44
+internal/virtual_mem/benchmarks/cow_bench_test.go:13:44:   flow: allocator ← ~r0:
+internal/virtual_mem/benchmarks/cow_bench_test.go:13:44:     from allocator := ~r0 (assign) at internal/virtual_mem/benchmarks/cow_bench_test.go:13:12
+internal/virtual_mem/benchmarks/cow_bench_test.go:13:44:   flow: cow.allocator ← allocator:
+internal/virtual_mem/benchmarks/cow_bench_test.go:13:44:     from cow.allocator, cow.table := allocator, table (assign-pair) at internal/virtual_mem/benchmarks/cow_bench_test.go:27:30
+internal/virtual_mem/benchmarks/cow_bench_test.go:13:44:   flow: {storage for &cow.CopyOnWrite{...}} ← cow.allocator:
+internal/virtual_mem/benchmarks/cow_bench_test.go:13:44:     from cow.CopyOnWrite{...} (struct literal element) at internal/virtual_mem/benchmarks/cow_bench_test.go:27:30
+internal/virtual_mem/benchmarks/cow_bench_test.go:13:44:   flow: ~r0 ← &{storage for &cow.CopyOnWrite{...}}:
+internal/virtual_mem/benchmarks/cow_bench_test.go:13:44:     from &cow.CopyOnWrite{...} (spill) at internal/virtual_mem/benchmarks/cow_bench_test.go:27:30
+internal/virtual_mem/benchmarks/cow_bench_test.go:13:44:     from ~r0 = &cow.CopyOnWrite{...} (assign-pair) at internal/virtual_mem/benchmarks/cow_bench_test.go:27:30
+internal/virtual_mem/benchmarks/cow_bench_test.go:13:44:   flow: engine ← ~r0:
+internal/virtual_mem/benchmarks/cow_bench_test.go:13:44:     from engine := ~r0 (assign) at internal/virtual_mem/benchmarks/cow_bench_test.go:27:9
+internal/virtual_mem/benchmarks/cow_bench_test.go:13:44:   flow: {heap} ← *engine:
+internal/virtual_mem/benchmarks/cow_bench_test.go:13:44:     from (*cow.CopyOnWrite).Fork(engine, uint64(1), uint64(2)) (call parameter) at internal/virtual_mem/benchmarks/cow_bench_test.go:32:13
+internal/virtual_mem/benchmarks/cow_bench_test.go:18:35: make(map[uint64]*virtual_mem.PhysicalFrame) escapes to heap in BenchmarkCopyOnWrite:
+internal/virtual_mem/benchmarks/cow_bench_test.go:18:35:   flow: {storage for &virtual_mem.PageTable{...}} ← &{storage for make(map[uint64]*virtual_mem.PhysicalFrame)}:
+internal/virtual_mem/benchmarks/cow_bench_test.go:18:35:     from make(map[uint64]*virtual_mem.PhysicalFrame) (spill) at internal/virtual_mem/benchmarks/cow_bench_test.go:18:35
+internal/virtual_mem/benchmarks/cow_bench_test.go:18:35:     from virtual_mem.PageTable{...} (struct literal element) at internal/virtual_mem/benchmarks/cow_bench_test.go:18:35
+internal/virtual_mem/benchmarks/cow_bench_test.go:10:2: b does not escape
+internal/virtual_mem/benchmarks/cow_bench_test.go:13:44: &virtual_mem.FrameAllocator{...} escapes to heap
+internal/virtual_mem/benchmarks/cow_bench_test.go:18:35: &virtual_mem.PageTable{...} escapes to heap
+internal/virtual_mem/benchmarks/cow_bench_test.go:18:35: make(map[uint64]*virtual_mem.PhysicalFrame) escapes to heap
+internal/virtual_mem/benchmarks/cow_bench_test.go:27:30: &cow.CopyOnWrite{...} does not escape
+internal/virtual_mem/benchmarks/cowfault_bench_test.go:10:2: b does not escape
+internal/virtual_mem/benchmarks/cowfault_bench_test.go:13:39: &virtual_mem.PhysicalFrame{...} does not escape
+internal/virtual_mem/benchmarks/cowfault_bench_test.go:13:39: make([]float32, 256) does not escape
+internal/virtual_mem/benchmarks/dagarena_bench_test.go:27:23: append(specbranchgraph.parent.Children, specbranchgraph.child) escapes to heap in BenchmarkArenaDAG:
+internal/virtual_mem/benchmarks/dagarena_bench_test.go:27:23:   flow: {heap} ← &{storage for append(specbranchgraph.parent.Children, specbranchgraph.child)}:
+internal/virtual_mem/benchmarks/dagarena_bench_test.go:27:23:     from append(specbranchgraph.parent.Children, specbranchgraph.child) (spill) at internal/virtual_mem/benchmarks/dagarena_bench_test.go:27:23
+internal/virtual_mem/benchmarks/dagarena_bench_test.go:27:23:     from specbranchgraph.parent.Children = append(specbranchgraph.parent.Children, specbranchgraph.child) (assign) at internal/virtual_mem/benchmarks/dagarena_bench_test.go:27:23
+internal/virtual_mem/benchmarks/dagarena_bench_test.go:13:32: make([]dagnodearena.Node, dagnodearena.size) escapes to heap in BenchmarkArenaDAG:
+internal/virtual_mem/benchmarks/dagarena_bench_test.go:13:32:   flow: {storage for &dagnodearena.Arena{...}} ← &{storage for make([]dagnodearena.Node, dagnodearena.size)}:
+internal/virtual_mem/benchmarks/dagarena_bench_test.go:13:32:     from make([]dagnodearena.Node, dagnodearena.size) (spill) at internal/virtual_mem/benchmarks/dagarena_bench_test.go:13:32
+internal/virtual_mem/benchmarks/dagarena_bench_test.go:13:32:     from dagnodearena.Arena{...} (struct literal element) at internal/virtual_mem/benchmarks/dagarena_bench_test.go:13:32
+internal/virtual_mem/benchmarks/dagarena_bench_test.go:13:32:   flow: ~r0 ← &{storage for &dagnodearena.Arena{...}}:
+internal/virtual_mem/benchmarks/dagarena_bench_test.go:13:32:     from &dagnodearena.Arena{...} (spill) at internal/virtual_mem/benchmarks/dagarena_bench_test.go:13:32
+internal/virtual_mem/benchmarks/dagarena_bench_test.go:13:32:     from ~r0 = &dagnodearena.Arena{...} (assign-pair) at internal/virtual_mem/benchmarks/dagarena_bench_test.go:13:32
+internal/virtual_mem/benchmarks/dagarena_bench_test.go:13:32:   flow: arena ← ~r0:
+internal/virtual_mem/benchmarks/dagarena_bench_test.go:13:32:     from arena := ~r0 (assign) at internal/virtual_mem/benchmarks/dagarena_bench_test.go:13:8
+internal/virtual_mem/benchmarks/dagarena_bench_test.go:13:32:   flow: dagnodearena.a ← arena:
+internal/virtual_mem/benchmarks/dagarena_bench_test.go:13:32:     from dagnodearena.a := arena (assign-pair) at internal/virtual_mem/benchmarks/dagarena_bench_test.go:19:24
+internal/virtual_mem/benchmarks/dagarena_bench_test.go:13:32:   flow: ~r0 ← *dagnodearena.a:
+internal/virtual_mem/benchmarks/dagarena_bench_test.go:13:32:     from dagnodearena.a.nodes (dot of pointer) at internal/virtual_mem/benchmarks/dagarena_bench_test.go:19:24
+internal/virtual_mem/benchmarks/dagarena_bench_test.go:13:32:     from dagnodearena.a.nodes[dagnodearena.index] (dot of pointer) at internal/virtual_mem/benchmarks/dagarena_bench_test.go:19:24
+internal/virtual_mem/benchmarks/dagarena_bench_test.go:13:32:     from &dagnodearena.a.nodes[dagnodearena.index] (address-of) at internal/virtual_mem/benchmarks/dagarena_bench_test.go:19:24
+internal/virtual_mem/benchmarks/dagarena_bench_test.go:13:32:     from ~r0 = &dagnodearena.a.nodes[dagnodearena.index] (assign-pair) at internal/virtual_mem/benchmarks/dagarena_bench_test.go:19:24
+internal/virtual_mem/benchmarks/dagarena_bench_test.go:13:32:   flow: root ← ~r0:
+internal/virtual_mem/benchmarks/dagarena_bench_test.go:13:32:     from root := ~r0 (assign) at internal/virtual_mem/benchmarks/dagarena_bench_test.go:19:7
+internal/virtual_mem/benchmarks/dagarena_bench_test.go:13:32:   flow: specbranchgraph.parent ← root:
+internal/virtual_mem/benchmarks/dagarena_bench_test.go:13:32:     from specbranchgraph.parent, specbranchgraph.child := root, child (assign-pair) at internal/virtual_mem/benchmarks/dagarena_bench_test.go:27:23
+internal/virtual_mem/benchmarks/dagarena_bench_test.go:13:32:   flow: {heap} ← specbranchgraph.parent:
+internal/virtual_mem/benchmarks/dagarena_bench_test.go:13:32:     from specbranchgraph.child.Parent = specbranchgraph.parent (assign) at internal/virtual_mem/benchmarks/dagarena_bench_test.go:27:23
+internal/virtual_mem/benchmarks/dagarena_bench_test.go:10:2: b does not escape
+internal/virtual_mem/benchmarks/dagarena_bench_test.go:13:32: &dagnodearena.Arena{...} does not escape
+internal/virtual_mem/benchmarks/dagarena_bench_test.go:13:32: make([]dagnodearena.Node, dagnodearena.size) escapes to heap
+internal/virtual_mem/benchmarks/dagarena_bench_test.go:27:23: append escapes to heap
+internal/virtual_mem/benchmarks/epochgc_bench_test.go:9:2: b does not escape
+internal/virtual_mem/benchmarks/epochgc_bench_test.go:12:28: &epochgc.Collector{} does not escape
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:15:29: make([]fixeddag.Node, uint64(100000)) escapes to heap in BenchmarkFixedDAG:
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:15:29:   flow: {heap} ← &{storage for make([]fixeddag.Node, uint64(100000))}:
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:15:29:     from make([]fixeddag.Node, uint64(100000)) (too large for stack) at internal/virtual_mem/benchmarks/fixeddag_bench_test.go:15:29
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:26:30: make([]fixeddag.Node, uint64(100000)) escapes to heap in BenchmarkFixedDAG:
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:26:30:   flow: {heap} ← &{storage for make([]fixeddag.Node, uint64(100000))}:
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:26:30:     from make([]fixeddag.Node, uint64(100000)) (too large for stack) at internal/virtual_mem/benchmarks/fixeddag_bench_test.go:26:30
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:38:31: make([]fixeddag.Node, uint64(100000)) escapes to heap in BenchmarkFixedDAG:
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:38:31:   flow: {heap} ← &{storage for make([]fixeddag.Node, uint64(100000))}:
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:38:31:     from make([]fixeddag.Node, uint64(100000)) (too large for stack) at internal/virtual_mem/benchmarks/fixeddag_bench_test.go:38:31
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:38:31: &specarena.Arena{...} escapes to heap in BenchmarkFixedDAG:
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:38:31:   flow: ~r0 ← &{storage for &specarena.Arena{...}}:
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:38:31:     from &specarena.Arena{...} (spill) at internal/virtual_mem/benchmarks/fixeddag_bench_test.go:38:31
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:38:31:     from ~r0 = &specarena.Arena{...} (assign-pair) at internal/virtual_mem/benchmarks/fixeddag_bench_test.go:38:31
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:38:31:   flow: arena ← ~r0:
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:38:31:     from arena = ~r0 (assign) at internal/virtual_mem/benchmarks/fixeddag_bench_test.go:38:11
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:38:31:   flow: specarena.a ← arena:
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:38:31:     from specarena.a := arena (assign-pair) at internal/virtual_mem/benchmarks/fixeddag_bench_test.go:29:25
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:26:30: &specarena.Arena{...} escapes to heap in BenchmarkFixedDAG:
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:26:30:   flow: ~r0 ← &{storage for &specarena.Arena{...}}:
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:26:30:     from &specarena.Arena{...} (spill) at internal/virtual_mem/benchmarks/fixeddag_bench_test.go:26:30
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:26:30:     from ~r0 = &specarena.Arena{...} (assign-pair) at internal/virtual_mem/benchmarks/fixeddag_bench_test.go:26:30
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:26:30:   flow: arena ← ~r0:
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:26:30:     from arena = ~r0 (assign) at internal/virtual_mem/benchmarks/fixeddag_bench_test.go:26:10
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:10:2: b does not escape
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:15:29: &specarena.Arena{...} does not escape
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:15:29: make([]fixeddag.Node, uint64(100000)) escapes to heap
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:26:30: &specarena.Arena{...} escapes to heap
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:26:30: make([]fixeddag.Node, uint64(100000)) escapes to heap
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:38:31: &specarena.Arena{...} escapes to heap
+internal/virtual_mem/benchmarks/fixeddag_bench_test.go:38:31: make([]fixeddag.Node, uint64(100000)) escapes to heap
+internal/virtual_mem/benchmarks/pager_bench_test.go:15:28: &swap.Manager{...} escapes to heap in BenchmarkPageFault:
+internal/virtual_mem/benchmarks/pager_bench_test.go:15:28:   flow: ~r0 ← &{storage for &swap.Manager{...}}:
+internal/virtual_mem/benchmarks/pager_bench_test.go:15:28:     from &swap.Manager{...} (spill) at internal/virtual_mem/benchmarks/pager_bench_test.go:15:28
+internal/virtual_mem/benchmarks/pager_bench_test.go:15:28:     from ~r0 = &swap.Manager{...} (assign-pair) at internal/virtual_mem/benchmarks/pager_bench_test.go:15:28
+internal/virtual_mem/benchmarks/pager_bench_test.go:15:28:   flow: swapper ← ~r0:
+internal/virtual_mem/benchmarks/pager_bench_test.go:15:28:     from swapper := ~r0 (assign) at internal/virtual_mem/benchmarks/pager_bench_test.go:15:10
+internal/virtual_mem/benchmarks/pager_bench_test.go:15:28:   flow: eviction.swapper ← swapper:
+internal/virtual_mem/benchmarks/pager_bench_test.go:15:28:     from eviction.swapper := swapper (assign-pair) at internal/virtual_mem/benchmarks/pager_bench_test.go:17:32
+internal/virtual_mem/benchmarks/pager_bench_test.go:15:28:   flow: {storage for &eviction.Evictor{...}} ← eviction.swapper:
+internal/virtual_mem/benchmarks/pager_bench_test.go:15:28:     from eviction.Evictor{...} (struct literal element) at internal/virtual_mem/benchmarks/pager_bench_test.go:17:32
+internal/virtual_mem/benchmarks/pager_bench_test.go:15:28:   flow: ~r0 ← &{storage for &eviction.Evictor{...}}:
+internal/virtual_mem/benchmarks/pager_bench_test.go:15:28:     from &eviction.Evictor{...} (spill) at internal/virtual_mem/benchmarks/pager_bench_test.go:17:32
+internal/virtual_mem/benchmarks/pager_bench_test.go:15:28:     from ~r0 = &eviction.Evictor{...} (assign-pair) at internal/virtual_mem/benchmarks/pager_bench_test.go:17:32
+internal/virtual_mem/benchmarks/pager_bench_test.go:15:28:   flow: evictor ← ~r0:
+internal/virtual_mem/benchmarks/pager_bench_test.go:15:28:     from evictor := ~r0 (assign) at internal/virtual_mem/benchmarks/pager_bench_test.go:17:10
+internal/virtual_mem/benchmarks/pager_bench_test.go:15:28:   flow: {heap} ← *evictor:
+internal/virtual_mem/benchmarks/pager_bench_test.go:15:28:     from (*eviction.Evictor).Evict(evictor, frame) (call parameter) at internal/virtual_mem/benchmarks/pager_bench_test.go:32:15
+internal/virtual_mem/benchmarks/pager_bench_test.go:15:28: make(map[uint64][]float32) escapes to heap in BenchmarkPageFault:
+internal/virtual_mem/benchmarks/pager_bench_test.go:15:28:   flow: {storage for &swap.Manager{...}} ← &{storage for make(map[uint64][]float32)}:
+internal/virtual_mem/benchmarks/pager_bench_test.go:15:28:     from make(map[uint64][]float32) (spill) at internal/virtual_mem/benchmarks/pager_bench_test.go:15:28
+internal/virtual_mem/benchmarks/pager_bench_test.go:15:28:     from swap.Manager{...} (struct literal element) at internal/virtual_mem/benchmarks/pager_bench_test.go:15:28
+internal/virtual_mem/benchmarks/pager_bench_test.go:12:2: b does not escape
+internal/virtual_mem/benchmarks/pager_bench_test.go:15:28: &swap.Manager{...} escapes to heap
+internal/virtual_mem/benchmarks/pager_bench_test.go:15:28: make(map[uint64][]float32) escapes to heap
+internal/virtual_mem/benchmarks/pager_bench_test.go:17:32: &eviction.Evictor{...} does not escape
+internal/virtual_mem/benchmarks/pager_bench_test.go:21:21: &pager.Pager{...} does not escape
+internal/virtual_mem/benchmarks/pager_bench_test.go:25:39: &virtual_mem.PhysicalFrame{...} does not escape
+internal/virtual_mem/benchmarks/pager_bench_test.go:25:39: make([]float32, 128) does not escape
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:15:21: &l1.Table{...} escapes to heap in BenchmarkPageWalker:
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:15:21:   flow: ~r0 ← &{storage for &l1.Table{...}}:
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:15:21:     from &l1.Table{...} (spill) at internal/virtual_mem/benchmarks/pagewalker_bench_test.go:15:21
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:15:21:     from ~r0 = &l1.Table{...} (assign-pair) at internal/virtual_mem/benchmarks/pagewalker_bench_test.go:15:21
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:15:21:   flow: root ← ~r0:
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:15:21:     from root := ~r0 (assign) at internal/virtual_mem/benchmarks/pagewalker_bench_test.go:15:7
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:15:21:   flow: {heap} ← root:
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:15:21:     from (*l1.Table).Ensure(root, uint64(1)) (call parameter) at internal/virtual_mem/benchmarks/pagewalker_bench_test.go:24:24
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:28:39: &virtual_mem.PhysicalFrame{...} escapes to heap in BenchmarkPageWalker:
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:28:39:   flow: virtual_mem.frame ← &{storage for &virtual_mem.PhysicalFrame{...}}:
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:28:39:     from &virtual_mem.PhysicalFrame{...} (spill) at internal/virtual_mem/benchmarks/pagewalker_bench_test.go:28:39
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:28:39:     from virtual_mem.frame := &virtual_mem.PhysicalFrame{...} (assign) at internal/virtual_mem/benchmarks/pagewalker_bench_test.go:28:39
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:28:39:   flow: ~r0 ← virtual_mem.frame:
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:28:39:     from ~r0 = virtual_mem.frame (assign-pair) at internal/virtual_mem/benchmarks/pagewalker_bench_test.go:28:39
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:28:39:   flow: frame ← ~r0:
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:28:39:     from frame := ~r0 (assign) at internal/virtual_mem/benchmarks/pagewalker_bench_test.go:28:8
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:28:39:   flow: {heap} ← frame:
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:28:39:     from (*l2.Table).Map(l2Table, uint64(2), frame) (call parameter) at internal/virtual_mem/benchmarks/pagewalker_bench_test.go:33:13
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:17:23: &tlb.Cache{...} escapes to heap in BenchmarkPageWalker:
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:17:23:   flow: ~r0 ← &{storage for &tlb.Cache{...}}:
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:17:23:     from &tlb.Cache{...} (spill) at internal/virtual_mem/benchmarks/pagewalker_bench_test.go:17:23
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:17:23:     from ~r0 = &tlb.Cache{...} (assign-pair) at internal/virtual_mem/benchmarks/pagewalker_bench_test.go:17:23
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:17:23:   flow: cache ← ~r0:
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:17:23:     from cache := ~r0 (assign) at internal/virtual_mem/benchmarks/pagewalker_bench_test.go:17:8
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:17:23:   flow: pagewalker.cache ← cache:
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:17:23:     from pagewalker.root, pagewalker.cache := root, cache (assign-pair) at internal/virtual_mem/benchmarks/pagewalker_bench_test.go:19:32
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:17:23:   flow: {storage for &pagewalker.Walker{...}} ← pagewalker.cache:
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:17:23:     from pagewalker.Walker{...} (struct literal element) at internal/virtual_mem/benchmarks/pagewalker_bench_test.go:19:32
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:17:23:   flow: ~r0 ← &{storage for &pagewalker.Walker{...}}:
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:17:23:     from &pagewalker.Walker{...} (spill) at internal/virtual_mem/benchmarks/pagewalker_bench_test.go:19:32
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:17:23:     from ~r0 = &pagewalker.Walker{...} (assign-pair) at internal/virtual_mem/benchmarks/pagewalker_bench_test.go:19:32
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:17:23:   flow: walker ← ~r0:
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:17:23:     from walker := ~r0 (assign) at internal/virtual_mem/benchmarks/pagewalker_bench_test.go:19:9
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:17:23:   flow: {heap} ← *walker:
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:17:23:     from (*pagewalker.Walker).Translate(walker, virtual) (call parameter) at internal/virtual_mem/benchmarks/pagewalker_bench_test.go:47:19
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:28:39: make([]float32, 256) escapes to heap in BenchmarkPageWalker:
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:28:39:   flow: {storage for &virtual_mem.PhysicalFrame{...}} ← &{storage for make([]float32, 256)}:
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:28:39:     from make([]float32, 256) (spill) at internal/virtual_mem/benchmarks/pagewalker_bench_test.go:28:39
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:28:39:     from virtual_mem.PhysicalFrame{...} (struct literal element) at internal/virtual_mem/benchmarks/pagewalker_bench_test.go:28:39
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:17:23: make(map[uint64]*virtual_mem.PhysicalFrame) escapes to heap in BenchmarkPageWalker:
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:17:23:   flow: {storage for &tlb.Cache{...}} ← &{storage for make(map[uint64]*virtual_mem.PhysicalFrame)}:
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:17:23:     from make(map[uint64]*virtual_mem.PhysicalFrame) (spill) at internal/virtual_mem/benchmarks/pagewalker_bench_test.go:17:23
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:17:23:     from tlb.Cache{...} (struct literal element) at internal/virtual_mem/benchmarks/pagewalker_bench_test.go:17:23
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:15:21: make(map[uint64]*l2.Table) escapes to heap in BenchmarkPageWalker:
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:15:21:   flow: {storage for &l1.Table{...}} ← &{storage for make(map[uint64]*l2.Table)}:
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:15:21:     from make(map[uint64]*l2.Table) (spill) at internal/virtual_mem/benchmarks/pagewalker_bench_test.go:15:21
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:15:21:     from l1.Table{...} (struct literal element) at internal/virtual_mem/benchmarks/pagewalker_bench_test.go:15:21
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:12:2: b does not escape
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:15:21: &l1.Table{...} escapes to heap
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:15:21: make(map[uint64]*l2.Table) escapes to heap
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:17:23: &tlb.Cache{...} escapes to heap
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:17:23: make(map[uint64]*virtual_mem.PhysicalFrame) escapes to heap
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:19:32: &pagewalker.Walker{...} does not escape
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:28:39: &virtual_mem.PhysicalFrame{...} escapes to heap
+internal/virtual_mem/benchmarks/pagewalker_bench_test.go:28:39: make([]float32, 256) escapes to heap
+internal/virtual_mem/benchmarks/specdag_bench_test.go:24:15: append(specdag.parent.Children, specdag.child) escapes to heap in BenchmarkSpecDAG:
+internal/virtual_mem/benchmarks/specdag_bench_test.go:24:15:   flow: {heap} ← &{storage for append(specdag.parent.Children, specdag.child)}:
+internal/virtual_mem/benchmarks/specdag_bench_test.go:24:15:     from append(specdag.parent.Children, specdag.child) (spill) at internal/virtual_mem/benchmarks/specdag_bench_test.go:24:15
+internal/virtual_mem/benchmarks/specdag_bench_test.go:24:15:     from specdag.parent.Children = append(specdag.parent.Children, specdag.child) (assign) at internal/virtual_mem/benchmarks/specdag_bench_test.go:24:15
+internal/virtual_mem/benchmarks/specdag_bench_test.go:12:25: &specdag.Node{...} escapes to heap in BenchmarkSpecDAG:
+internal/virtual_mem/benchmarks/specdag_bench_test.go:12:25:   flow: ~r0 ← &{storage for &specdag.Node{...}}:
+internal/virtual_mem/benchmarks/specdag_bench_test.go:12:25:     from &specdag.Node{...} (spill) at internal/virtual_mem/benchmarks/specdag_bench_test.go:12:25
+internal/virtual_mem/benchmarks/specdag_bench_test.go:12:25:     from ~r0 = &specdag.Node{...} (assign-pair) at internal/virtual_mem/benchmarks/specdag_bench_test.go:12:25
+internal/virtual_mem/benchmarks/specdag_bench_test.go:12:25:   flow: root ← ~r0:
+internal/virtual_mem/benchmarks/specdag_bench_test.go:12:25:     from root := ~r0 (assign) at internal/virtual_mem/benchmarks/specdag_bench_test.go:12:7
+internal/virtual_mem/benchmarks/specdag_bench_test.go:12:25:   flow: specdag.parent ← root:
+internal/virtual_mem/benchmarks/specdag_bench_test.go:12:25:     from specdag.parent, specdag.child := root, child (assign-pair) at internal/virtual_mem/benchmarks/specdag_bench_test.go:24:15
+internal/virtual_mem/benchmarks/specdag_bench_test.go:12:25:   flow: {heap} ← specdag.parent:
+internal/virtual_mem/benchmarks/specdag_bench_test.go:12:25:     from specdag.child.Parent = specdag.parent (assign) at internal/virtual_mem/benchmarks/specdag_bench_test.go:24:15
+internal/virtual_mem/benchmarks/specdag_bench_test.go:20:27: &specdag.Node{...} escapes to heap in BenchmarkSpecDAG:
+internal/virtual_mem/benchmarks/specdag_bench_test.go:20:27:   flow: ~r0 ← &{storage for &specdag.Node{...}}:
+internal/virtual_mem/benchmarks/specdag_bench_test.go:20:27:     from &specdag.Node{...} (spill) at internal/virtual_mem/benchmarks/specdag_bench_test.go:20:27
+internal/virtual_mem/benchmarks/specdag_bench_test.go:20:27:     from ~r0 = &specdag.Node{...} (assign-pair) at internal/virtual_mem/benchmarks/specdag_bench_test.go:20:27
+internal/virtual_mem/benchmarks/specdag_bench_test.go:20:27:   flow: child ← ~r0:
+internal/virtual_mem/benchmarks/specdag_bench_test.go:20:27:     from child := ~r0 (assign) at internal/virtual_mem/benchmarks/specdag_bench_test.go:20:9
+internal/virtual_mem/benchmarks/specdag_bench_test.go:20:27:   flow: specdag.child ← child:
+internal/virtual_mem/benchmarks/specdag_bench_test.go:20:27:     from specdag.parent, specdag.child := root, child (assign-pair) at internal/virtual_mem/benchmarks/specdag_bench_test.go:24:15
+internal/virtual_mem/benchmarks/specdag_bench_test.go:20:27:   flow: {heap} ← specdag.child:
+internal/virtual_mem/benchmarks/specdag_bench_test.go:20:27:     from append(specdag.parent.Children, specdag.child) (call parameter) at internal/virtual_mem/benchmarks/specdag_bench_test.go:24:15
+internal/virtual_mem/benchmarks/specdag_bench_test.go:9:2: b does not escape
+internal/virtual_mem/benchmarks/specdag_bench_test.go:12:25: &specdag.Node{...} escapes to heap
+internal/virtual_mem/benchmarks/specdag_bench_test.go:20:27: &specdag.Node{...} escapes to heap
+internal/virtual_mem/benchmarks/specdag_bench_test.go:24:15: append escapes to heap
+internal/virtual_mem/benchmarks/specwalk_bench_test.go:12:2: b does not escape
+internal/virtual_mem/benchmarks/specwalk_bench_test.go:15:21: &l1.Table{...} does not escape
+internal/virtual_mem/benchmarks/specwalk_bench_test.go:15:21: make(map[uint64]*l2.Table) does not escape
+internal/virtual_mem/benchmarks/specwalk_bench_test.go:17:33: &snapshotspace.Space{...} does not escape
+internal/virtual_mem/benchmarks/specwalk_bench_test.go:22:23: &tlb.Cache{...} does not escape
+internal/virtual_mem/benchmarks/specwalk_bench_test.go:22:23: make(map[uint64]*virtual_mem.PhysicalFrame) does not escape
+internal/virtual_mem/benchmarks/specwalk_bench_test.go:24:30: &specwalk.Walker{...} does not escape
+internal/virtual_mem/benchmarks/specwalk_bench_test.go:33:19: &pagewalker.Walker{...} does not escape
+# branchkv-core/internal/virtual_mem/benchmarks.test
+_testmain.go:55:6: can inline init.0 with cost 6 as: func() { testdeps.ModulePath = "branchkv-core"; testdeps.ImportPath = "branchkv-core/internal/virtual_mem/benchmarks" }
+_testmain.go:61:6: cannot inline main: function too complex: cost 187 exceeds budget 80
+<autogenerated>:1: inlining call to reflect.flag.kind
+<autogenerated>:1: inlining call to reflect.flag.kind
+<autogenerated>:1: inlining call to reflect.flag.mustBe
+<autogenerated>:1: inlining call to reflect.flag.kind
+<autogenerated>:1: inlining call to reflect.flag.mustBe
+<autogenerated>:1: inlining call to reflect.flag.kind
+<autogenerated>:1: inlining call to reflect.flag.mustBeAssignable
+<autogenerated>:1: inlining call to reflect.flag.mustBeAssignable
+<autogenerated>:1: inlining call to reflect.flag.mustBeExported
+<autogenerated>:1: inlining call to reflect.flag.mustBeExported
+<autogenerated>:1: inlining call to reflect.flag.ro
+<autogenerated>:1: inlining call to reflect.flag.ro
+_testmain.go:62:42: testdeps.TestDeps{} escapes to heap in main:
+_testmain.go:62:42:   flow: {heap} ← &{storage for testdeps.TestDeps{}}:
+_testmain.go:62:42:     from testdeps.TestDeps{} (spill) at _testmain.go:62:42
+_testmain.go:62:42:     from testing.MainStart(testdeps.TestDeps{}, tests, benchmarks, fuzzTargets, examples) (call parameter) at _testmain.go:62:24
+_testmain.go:62:42: testdeps.TestDeps{} escapes to heap
+<autogenerated>:1: &reflect.ValueError{...} escapes to heap in struct { reflect.typ_ *internal/abi.Type; reflect.ptr unsafe.Pointer; reflect.flag }.reflect.mustBe:
+<autogenerated>:1:   flow: {heap} ← &{storage for &reflect.ValueError{...}}:
+<autogenerated>:1:     from &reflect.ValueError{...} (spill) at <autogenerated>:1
+<autogenerated>:1:     from &reflect.ValueError{...} (interface-converted) at <autogenerated>:1
+<autogenerated>:1:     from panic(&reflect.ValueError{...}) (call parameter) at <autogenerated>:1
+<autogenerated>:1: &reflect.ValueError{...} escapes to heap
+<autogenerated>:1: &reflect.ValueError{...} escapes to heap in (*struct { reflect.typ_ *internal/abi.Type; reflect.ptr unsafe.Pointer; reflect.flag }).reflect.mustBe:
+<autogenerated>:1:   flow: {heap} ← &{storage for &reflect.ValueError{...}}:
+<autogenerated>:1:     from &reflect.ValueError{...} (spill) at <autogenerated>:1
+<autogenerated>:1:     from &reflect.ValueError{...} (interface-converted) at <autogenerated>:1
+<autogenerated>:1:     from panic(&reflect.ValueError{...}) (call parameter) at <autogenerated>:1
+<autogenerated>:1: &reflect.ValueError{...} escapes to heap
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.Align with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.Align() (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.AssignableTo with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.AssignableTo(reflect.u) (call parameter) at <autogenerated>:1
+/usr/local/go/src/reflect/type.go:122:15: parameter reflect.u leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.AssignableTo with derefs=0:
+/usr/local/go/src/reflect/type.go:122:15:   flow: {heap} ← reflect.u:
+/usr/local/go/src/reflect/type.go:122:15:     from go.shape.~p0.AssignableTo(reflect.u) (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.Bits with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.Bits() (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.CanSeq with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.CanSeq() (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.CanSeq2 with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.CanSeq2() (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.ChanDir with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.ChanDir() (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.Comparable with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.Comparable() (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.ConvertibleTo with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.ConvertibleTo(reflect.u) (call parameter) at <autogenerated>:1
+/usr/local/go/src/reflect/type.go:128:16: parameter reflect.u leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.ConvertibleTo with derefs=0:
+/usr/local/go/src/reflect/type.go:128:16:   flow: {heap} ← reflect.u:
+/usr/local/go/src/reflect/type.go:128:16:     from go.shape.~p0.ConvertibleTo(reflect.u) (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.Elem with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.Elem() (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.Field with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.Field(reflect.i) (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.FieldAlign with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.FieldAlign() (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.FieldByIndex with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.FieldByIndex(reflect.index) (call parameter) at <autogenerated>:1
+/usr/local/go/src/reflect/type.go:189:15: parameter reflect.index leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.FieldByIndex with derefs=0:
+/usr/local/go/src/reflect/type.go:189:15:   flow: {heap} ← reflect.index:
+/usr/local/go/src/reflect/type.go:189:15:     from go.shape.~p0.FieldByIndex(reflect.index) (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.FieldByName with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.FieldByName(reflect.name) (call parameter) at <autogenerated>:1
+/usr/local/go/src/reflect/type.go:196:14: parameter reflect.name leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.FieldByName with derefs=0:
+/usr/local/go/src/reflect/type.go:196:14:   flow: {heap} ← reflect.name:
+/usr/local/go/src/reflect/type.go:196:14:     from go.shape.~p0.FieldByName(reflect.name) (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.FieldByNameFunc with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.FieldByNameFunc(reflect.match) (call parameter) at <autogenerated>:1
+/usr/local/go/src/reflect/type.go:214:18: parameter reflect.match leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.FieldByNameFunc with derefs=0:
+/usr/local/go/src/reflect/type.go:214:18:   flow: {heap} ← reflect.match:
+/usr/local/go/src/reflect/type.go:214:18:     from go.shape.~p0.FieldByNameFunc(reflect.match) (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.Fields with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.Fields() (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.Implements with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.Implements(reflect.u) (call parameter) at <autogenerated>:1
+/usr/local/go/src/reflect/type.go:119:13: parameter reflect.u leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.Implements with derefs=0:
+/usr/local/go/src/reflect/type.go:119:13:   flow: {heap} ← reflect.u:
+/usr/local/go/src/reflect/type.go:119:13:     from go.shape.~p0.Implements(reflect.u) (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.In with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.In(reflect.i) (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.Ins with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.Ins() (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.IsVariadic with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.IsVariadic() (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.Key with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.Key() (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.Kind with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.Kind() (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.Len with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.Len() (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.Method with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.Method(go.shape.~p1) (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.MethodByName with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.MethodByName(go.shape.~p1) (call parameter) at <autogenerated>:1
+/usr/local/go/src/reflect/type.go:84:15: parameter go.shape.~p1 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.MethodByName with derefs=0:
+/usr/local/go/src/reflect/type.go:84:15:   flow: {heap} ← go.shape.~p1:
+/usr/local/go/src/reflect/type.go:84:15:     from go.shape.~p0.MethodByName(go.shape.~p1) (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.Methods with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.Methods() (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.Name with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.Name() (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.NumField with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.NumField() (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.NumIn with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.NumIn() (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.NumMethod with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.NumMethod() (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.NumOut with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.NumOut() (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.Out with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.Out(reflect.i) (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.Outs with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.Outs() (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.OverflowComplex with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.OverflowComplex(reflect.x) (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.OverflowFloat with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.OverflowFloat(reflect.x) (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.OverflowInt with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.OverflowInt(reflect.x) (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.OverflowUint with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.OverflowUint(reflect.x) (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.PkgPath with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.PkgPath() (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.Size with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.Size() (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.String with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.String() (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.reflect.common with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.common() (call parameter) at <autogenerated>:1
+<autogenerated>:1: parameter go.shape.~p0 leaks to {heap} for 5614d73739c4cb953979c5b476501cda147b86386834ff88f636587787e0f1e9.reflect.uncommon with derefs=0:
+<autogenerated>:1:   flow: {heap} ← go.shape.~p0:
+<autogenerated>:1:     from go.shape.~p0.uncommon() (call parameter) at <autogenerated>:1

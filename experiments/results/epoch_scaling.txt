@@ -1,0 +1,16 @@
+goos: linux
+goarch: amd64
+pkg: branchkv-core/internal/experiments/epoch_scaling
+cpu: AMD EPYC 7763 64-Core Processor                
+BenchmarkEpochScaling-4   	1000000000	         0.3183 ns/op	       0 B/op	       0 allocs/op
+BenchmarkEpochScaling-4   	1000000000	         0.3210 ns/op	       0 B/op	       0 allocs/op
+BenchmarkEpochScaling-4   	1000000000	         0.3378 ns/op	       0 B/op	       0 allocs/op
+BenchmarkEpochScaling-4   	1000000000	         0.3390 ns/op	       0 B/op	       0 allocs/op
+BenchmarkEpochScaling-4   	1000000000	         0.3194 ns/op	       0 B/op	       0 allocs/op
+BenchmarkEpochScaling-4   	1000000000	         0.3169 ns/op	       0 B/op	       0 allocs/op
+BenchmarkEpochScaling-4   	1000000000	         0.3732 ns/op	       0 B/op	       0 allocs/op
+BenchmarkEpochScaling-4   	1000000000	         0.3185 ns/op	       0 B/op	       0 allocs/op
+BenchmarkEpochScaling-4   	1000000000	         0.3416 ns/op	       0 B/op	       0 allocs/op
+BenchmarkEpochScaling-4   	1000000000	         0.3336 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	branchkv-core/internal/experiments/epoch_scaling	3.671s
