@@ -23,6 +23,7 @@
 [![Go Version](https://img.shields.io/badge/Go-1.22%2B-00ADD8?style=for-the-badge&logo=go&logoColor=white)](https://go.dev)
 [![License](https://img.shields.io/badge/License-Apache%202.0-3DA639?style=for-the-badge)](LICENSE)
 [![Research](https://img.shields.io/badge/Domain-MLSys%20%7C%20OS%20Research-FF6B35?style=for-the-badge)](https://arxiv.org)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20675919.svg)](https://doi.org/10.5281/zenodo.20675919)
 [![Status](https://img.shields.io/badge/Status-Active%20Research-blueviolet?style=for-the-badge)](https://github.com/branchkv/branchkv)
 [![Stars](https://img.shields.io/github/stars/branchkv/branchkv?style=for-the-badge&color=FFD700)](https://github.com/branchkv/branchkv/stargazers)
 
