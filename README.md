@@ -1,5 +1,5 @@
 <div align="center">
-
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20675919.svg)](https://doi.org/10.5281/zenodo.20675919)
 <!-- ANIMATED TYPING BANNER -->
 <a href="https://github.com/branchkv/branchkv">
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=00D9FF&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=100&lines=BranchKV+%E2%80%94+Speculative+Memory+Runtime;Branch-Aware+AI+Execution+Engine;Copy-on-Write+%C3%97+Speculative+DAG" alt="BranchKV Typing SVG" />
